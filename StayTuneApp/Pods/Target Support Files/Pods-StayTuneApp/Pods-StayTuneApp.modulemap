@@ -1,6 +1,0 @@
-framework module Pods_StayTuneApp {
-  umbrella header "Pods-StayTuneApp-umbrella.h"
-
-  export *
-  module * { export * }
-}

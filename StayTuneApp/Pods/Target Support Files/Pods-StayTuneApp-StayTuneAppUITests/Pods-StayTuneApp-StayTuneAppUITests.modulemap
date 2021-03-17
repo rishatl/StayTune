@@ -1,6 +1,0 @@
-framework module Pods_StayTuneApp_StayTuneAppUITests {
-  umbrella header "Pods-StayTuneApp-StayTuneAppUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
