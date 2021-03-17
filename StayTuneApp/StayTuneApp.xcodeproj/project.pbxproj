@@ -3,19 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26691EAB8B99C52EA48DEA01 /* Pods_StayTuneAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1262C9BE11160BC91ED9826 /* Pods_StayTuneAppTests.framework */; };
+		4503A2C52601197500AF7179 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503A2C42601197500AF7179 /* SignUpPresenter.swift */; };
+		4503A2CB26011A1800AF7179 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503A2CA26011A1800AF7179 /* LoginPresenter.swift */; };
+		4539B79125FEAFCC0007C434 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4539B79025FEAFCC0007C434 /* GoogleService-Info.plist */; };
+		4539B79225FEAFCC0007C434 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4539B79025FEAFCC0007C434 /* GoogleService-Info.plist */; };
+		4539B79325FEAFCC0007C434 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4539B79025FEAFCC0007C434 /* GoogleService-Info.plist */; };
 		453AF9F325EBBC9900D9E0B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453AF9F225EBBC9900D9E0B2 /* AppDelegate.swift */; };
-		453AF9F525EBBC9900D9E0B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453AF9F425EBBC9900D9E0B2 /* SceneDelegate.swift */; };
-		453AF9F725EBBC9900D9E0B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453AF9F625EBBC9900D9E0B2 /* ViewController.swift */; };
+		453AF9F725EBBC9900D9E0B2 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453AF9F625EBBC9900D9E0B2 /* StartViewController.swift */; };
 		453AF9FA25EBBC9900D9E0B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453AF9F825EBBC9900D9E0B2 /* Main.storyboard */; };
 		453AF9FD25EBBC9900D9E0B2 /* StayTuneApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 453AF9FB25EBBC9900D9E0B2 /* StayTuneApp.xcdatamodeld */; };
 		453AF9FF25EBBC9B00D9E0B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453AF9FE25EBBC9B00D9E0B2 /* Assets.xcassets */; };
 		453AFA0225EBBC9C00D9E0B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453AFA0025EBBC9C00D9E0B2 /* LaunchScreen.storyboard */; };
 		453AFA0D25EBBC9C00D9E0B2 /* StayTuneAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453AFA0C25EBBC9C00D9E0B2 /* StayTuneAppTests.swift */; };
 		453AFA1825EBBC9C00D9E0B2 /* StayTuneAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453AFA1725EBBC9C00D9E0B2 /* StayTuneAppUITests.swift */; };
+		455309E525FE0F65004895AB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455309E425FE0F65004895AB /* Utilities.swift */; };
+		457E36F025F91D44005F921A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E36EF25F91D44005F921A /* HomeViewController.swift */; };
+		45AFD1C025F8C1D400C35DC3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFD1BF25F8C1D400C35DC3 /* LoginViewController.swift */; };
+		45AFD1C525F8C1E400C35DC3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFD1C425F8C1E400C35DC3 /* SignUpViewController.swift */; };
+		45AFD1DE25F8E35F00C35DC3 /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFD1DD25F8E35F00C35DC3 /* AuthorizationCoordinator.swift */; };
+		94FF57796EBE8997ED35BFCF /* Pods_StayTuneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA936086CA84FDA3DD463C3 /* Pods_StayTuneApp.framework */; };
+		BED628CD63A39B5DC3B896EA /* Pods_StayTuneApp_StayTuneAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83803C797E4B226D72D901DE /* Pods_StayTuneApp_StayTuneAppUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24FD2F242B6E211B62F2DB46 /* Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig"; path = "Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3FA936086CA84FDA3DD463C3 /* Pods_StayTuneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StayTuneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4503A2C42601197500AF7179 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		4503A2CA26011A1800AF7179 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		4539B79025FEAFCC0007C434 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		453AF9EF25EBBC9900D9E0B2 /* StayTuneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayTuneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		453AF9F225EBBC9900D9E0B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		453AF9F425EBBC9900D9E0B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		453AF9F625EBBC9900D9E0B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		453AF9F625EBBC9900D9E0B2 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		453AF9F925EBBC9900D9E0B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		453AF9FC25EBBC9900D9E0B2 /* StayTuneApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StayTuneApp.xcdatamodel; sourceTree = "<group>"; };
 		453AF9FE25EBBC9B00D9E0B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +67,18 @@
 		453AFA1325EBBC9C00D9E0B2 /* StayTuneAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StayTuneAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		453AFA1725EBBC9C00D9E0B2 /* StayTuneAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayTuneAppUITests.swift; sourceTree = "<group>"; };
 		453AFA1925EBBC9C00D9E0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		455309E425FE0F65004895AB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		457E36EF25F91D44005F921A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		45AFD1BF25F8C1D400C35DC3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		45AFD1C425F8C1E400C35DC3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		45AFD1DD25F8E35F00C35DC3 /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
+		6A18E6D961435D2E7D886B26 /* Pods-StayTuneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneApp.release.xcconfig"; path = "Target Support Files/Pods-StayTuneApp/Pods-StayTuneApp.release.xcconfig"; sourceTree = "<group>"; };
+		6AB81A98EA73302DA2D1B63C /* Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7438A1DBED1273E8FF55E196 /* Pods-StayTuneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneApp.debug.xcconfig"; path = "Target Support Files/Pods-StayTuneApp/Pods-StayTuneApp.debug.xcconfig"; sourceTree = "<group>"; };
+		83803C797E4B226D72D901DE /* Pods_StayTuneApp_StayTuneAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StayTuneApp_StayTuneAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1262C9BE11160BC91ED9826 /* Pods_StayTuneAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StayTuneAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C289A0D1F3A16E10A62455D8 /* Pods-StayTuneAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneAppTests.debug.xcconfig"; path = "Target Support Files/Pods-StayTuneAppTests/Pods-StayTuneAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C687A8C1983FB492C800C58B /* Pods-StayTuneAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneAppTests.release.xcconfig"; path = "Target Support Files/Pods-StayTuneAppTests/Pods-StayTuneAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94FF57796EBE8997ED35BFCF /* Pods_StayTuneApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26691EAB8B99C52EA48DEA01 /* Pods_StayTuneAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +102,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED628CD63A39B5DC3B896EA /* Pods_StayTuneApp_StayTuneAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171B1132316E84E7ECA39438 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7438A1DBED1273E8FF55E196 /* Pods-StayTuneApp.debug.xcconfig */,
+				6A18E6D961435D2E7D886B26 /* Pods-StayTuneApp.release.xcconfig */,
+				6AB81A98EA73302DA2D1B63C /* Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig */,
+				24FD2F242B6E211B62F2DB46 /* Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig */,
+				C289A0D1F3A16E10A62455D8 /* Pods-StayTuneAppTests.debug.xcconfig */,
+				C687A8C1983FB492C800C58B /* Pods-StayTuneAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4503A2CF26011A1E00AF7179 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				453AF9F625EBBC9900D9E0B2 /* StartViewController.swift */,
+				45AFD1BF25F8C1D400C35DC3 /* LoginViewController.swift */,
+				45AFD1C425F8C1E400C35DC3 /* SignUpViewController.swift */,
+				457E36EF25F91D44005F921A /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4503A2D026011A2700AF7179 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				4503A2CA26011A1800AF7179 /* LoginPresenter.swift */,
+				4503A2C42601197500AF7179 /* SignUpPresenter.swift */,
+			);
+			name = Presenters;
+			sourceTree = "<group>";
+		};
+		4516D6DF25F911D100E14496 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4516D6E125F911EE00E14496 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				455309E325FE0F47004895AB /* Helpers */,
+				4503A2D026011A2700AF7179 /* Presenters */,
+				4503A2CF26011A1E00AF7179 /* ViewControllers */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
 		453AF9E625EBBC9900D9E0B2 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +166,8 @@
 				453AFA0B25EBBC9C00D9E0B2 /* StayTuneAppTests */,
 				453AFA1625EBBC9C00D9E0B2 /* StayTuneAppUITests */,
 				453AF9F025EBBC9900D9E0B2 /* Products */,
+				171B1132316E84E7ECA39438 /* Pods */,
+				CCBA2AF870DD1FE9CE1B8743 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,12 +184,13 @@
 		453AF9F125EBBC9900D9E0B2 /* StayTuneApp */ = {
 			isa = PBXGroup;
 			children = (
-				453AF9F225EBBC9900D9E0B2 /* AppDelegate.swift */,
-				453AF9F425EBBC9900D9E0B2 /* SceneDelegate.swift */,
-				453AF9F625EBBC9900D9E0B2 /* ViewController.swift */,
-				453AF9F825EBBC9900D9E0B2 /* Main.storyboard */,
-				453AF9FE25EBBC9B00D9E0B2 /* Assets.xcassets */,
-				453AFA0025EBBC9C00D9E0B2 /* LaunchScreen.storyboard */,
+				45C3A24F25EFCBB20058529D /* AppDelegate */,
+				45C3A25025EFCBBD0058529D /* Storyboards */,
+				45C3A25625EFCBFC0058529D /* Coordinators */,
+				45C3A25425EFCBE80058529D /* Modules */,
+				45C3A25225EFCBD80058529D /* Models */,
+				4516D6DF25F911D100E14496 /* Services */,
+				45C3A25125EFCBCE0058529D /* Resources */,
 				453AFA0325EBBC9C00D9E0B2 /* Info.plist */,
 				453AF9FB25EBBC9900D9E0B2 /* StayTuneApp.xcdatamodeld */,
 			);
@@ -126,9 +210,76 @@
 			isa = PBXGroup;
 			children = (
 				453AFA1725EBBC9C00D9E0B2 /* StayTuneAppUITests.swift */,
+				4539B79025FEAFCC0007C434 /* GoogleService-Info.plist */,
 				453AFA1925EBBC9C00D9E0B2 /* Info.plist */,
 			);
 			path = StayTuneAppUITests;
+			sourceTree = "<group>";
+		};
+		455309E325FE0F47004895AB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				455309E425FE0F65004895AB /* Utilities.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		45C3A24F25EFCBB20058529D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				453AF9F225EBBC9900D9E0B2 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		45C3A25025EFCBBD0058529D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				453AFA0025EBBC9C00D9E0B2 /* LaunchScreen.storyboard */,
+				453AF9F825EBBC9900D9E0B2 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		45C3A25125EFCBCE0058529D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				453AF9FE25EBBC9B00D9E0B2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		45C3A25225EFCBD80058529D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		45C3A25425EFCBE80058529D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4516D6E125F911EE00E14496 /* Authorization */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		45C3A25625EFCBFC0058529D /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				45AFD1DD25F8E35F00C35DC3 /* AuthorizationCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		CCBA2AF870DD1FE9CE1B8743 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FA936086CA84FDA3DD463C3 /* Pods_StayTuneApp.framework */,
+				83803C797E4B226D72D901DE /* Pods_StayTuneApp_StayTuneAppUITests.framework */,
+				C1262C9BE11160BC91ED9826 /* Pods_StayTuneAppTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +289,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 453AFA1C25EBBC9C00D9E0B2 /* Build configuration list for PBXNativeTarget "StayTuneApp" */;
 			buildPhases = (
+				1BAD429F76E16818BF3E0902 /* [CP] Check Pods Manifest.lock */,
+				451B789925F79B150092C861 /* Swiftlint */,
 				453AF9EB25EBBC9900D9E0B2 /* Sources */,
 				453AF9EC25EBBC9900D9E0B2 /* Frameworks */,
 				453AF9ED25EBBC9900D9E0B2 /* Resources */,
+				D4C6A9A66FA0808CF27BF456 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +309,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 453AFA1F25EBBC9C00D9E0B2 /* Build configuration list for PBXNativeTarget "StayTuneAppTests" */;
 			buildPhases = (
+				B5C29C68432B733C421B99E7 /* [CP] Check Pods Manifest.lock */,
 				453AFA0425EBBC9C00D9E0B2 /* Sources */,
 				453AFA0525EBBC9C00D9E0B2 /* Frameworks */,
 				453AFA0625EBBC9C00D9E0B2 /* Resources */,
@@ -173,9 +328,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 453AFA2225EBBC9C00D9E0B2 /* Build configuration list for PBXNativeTarget "StayTuneAppUITests" */;
 			buildPhases = (
+				C01C2F9F6ADF485FD26A818D /* [CP] Check Pods Manifest.lock */,
 				453AFA0F25EBBC9C00D9E0B2 /* Sources */,
 				453AFA1025EBBC9C00D9E0B2 /* Frameworks */,
 				453AFA1125EBBC9C00D9E0B2 /* Resources */,
+				4A566E4F3CF97ABDB883622B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				453AFA0225EBBC9C00D9E0B2 /* LaunchScreen.storyboard in Resources */,
+				4539B79125FEAFCC0007C434 /* GoogleService-Info.plist in Resources */,
 				453AF9FF25EBBC9B00D9E0B2 /* Assets.xcassets in Resources */,
 				453AF9FA25EBBC9900D9E0B2 /* Main.storyboard in Resources */,
 			);
@@ -244,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4539B79225FEAFCC0007C434 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,20 +410,148 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4539B79325FEAFCC0007C434 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BAD429F76E16818BF3E0902 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StayTuneApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		451B789925F79B150092C861 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		4A566E4F3CF97ABDB883622B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5C29C68432B733C421B99E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StayTuneAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C01C2F9F6ADF485FD26A818D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StayTuneApp-StayTuneAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4C6A9A66FA0808CF27BF456 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StayTuneApp/Pods-StayTuneApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StayTuneApp/Pods-StayTuneApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StayTuneApp/Pods-StayTuneApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		453AF9EB25EBBC9900D9E0B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				453AF9F725EBBC9900D9E0B2 /* ViewController.swift in Sources */,
+				4503A2C52601197500AF7179 /* SignUpPresenter.swift in Sources */,
+				45AFD1C525F8C1E400C35DC3 /* SignUpViewController.swift in Sources */,
+				453AF9F725EBBC9900D9E0B2 /* StartViewController.swift in Sources */,
 				453AF9F325EBBC9900D9E0B2 /* AppDelegate.swift in Sources */,
+				4503A2CB26011A1800AF7179 /* LoginPresenter.swift in Sources */,
 				453AF9FD25EBBC9900D9E0B2 /* StayTuneApp.xcdatamodeld in Sources */,
-				453AF9F525EBBC9900D9E0B2 /* SceneDelegate.swift in Sources */,
+				45AFD1C025F8C1D400C35DC3 /* LoginViewController.swift in Sources */,
+				457E36F025F91D44005F921A /* HomeViewController.swift in Sources */,
+				455309E525FE0F65004895AB /* Utilities.swift in Sources */,
+				45AFD1DE25F8E35F00C35DC3 /* AuthorizationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +657,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -425,7 +712,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -437,11 +724,13 @@
 		};
 		453AFA1D25EBBC9C00D9E0B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7438A1DBED1273E8FF55E196 /* Pods-StayTuneApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = StayTuneApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,11 +744,13 @@
 		};
 		453AFA1E25EBBC9C00D9E0B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A18E6D961435D2E7D886B26 /* Pods-StayTuneApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = StayTuneApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,6 +764,7 @@
 		};
 		453AFA2025EBBC9C00D9E0B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C289A0D1F3A16E10A62455D8 /* Pods-StayTuneAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +786,7 @@
 		};
 		453AFA2125EBBC9C00D9E0B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C687A8C1983FB492C800C58B /* Pods-StayTuneAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +808,7 @@
 		};
 		453AFA2325EBBC9C00D9E0B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AB81A98EA73302DA2D1B63C /* Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +828,7 @@
 		};
 		453AFA2425EBBC9C00D9E0B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24FD2F242B6E211B62F2DB46 /* Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
