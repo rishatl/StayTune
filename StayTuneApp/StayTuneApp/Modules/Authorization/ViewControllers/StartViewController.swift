@@ -22,8 +22,8 @@ class StartViewController: UIViewController {
     }
 
     func setUpElements() {
-        Utilities.styleFilledButton(signUpButton)
-        Utilities.styleHollowButton(loginButton)
+        FilledButtonUtilities.styleFilledButton(signUpButton)
+        HollowButtonUtilities.styleHollowButton(loginButton)
     }
 
     @IBAction private func signUp(_ sender: Any) {

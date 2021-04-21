@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -16,6 +15,8 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var loginButton: UIButton!
     var toHome: (() -> Void)?
 
+    var presenter: LoginPresenter?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,34 +25,28 @@ class LoginViewController: UIViewController {
 
     func setUpElements() {
         errorLabel.alpha = 0
-        Utilities.styleTextField(loginTextField)
-        Utilities.styleTextField(passwordTextField)
-        Utilities.styleFilledButton(loginButton)
+        TextFieldUtilities.styleTextField(loginTextField)
+        TextFieldUtilities.styleTextField(passwordTextField)
+        FilledButtonUtilities.styleFilledButton(loginButton)
     }
 
     @IBAction private func loginTapped(_ sender: Any) {
         let login = loginTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
 
-        Auth.auth().signIn(withEmail: login, password: password) { result, error in
-            if error != nil {
-                self.errorLabel.text = error!.localizedDescription
-                self.errorLabel.alpha = 1
-                self.errorLabel.numberOfLines = 0
-            } else {
-                self.toHome?()
-            }
-        }
+        presenter?.login(login: login, password: password)
     }
 
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        if (touches.first) != nil {
-//                view.endEditing(true)
-//            }
-//            super.touchesBegan(touches, with: event)
-//    }
+    func showError(_ message: String) {
+        self.errorLabel.text = message
+        self.errorLabel.alpha = 1
+        self.errorLabel.numberOfLines = 0
+    }
 
-//    private func login() {
-//        toLogin?()
-//    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if (touches.first) != nil {
+                view.endEditing(true)
+            }
+            super.touchesBegan(touches, with: event)
+    }
 }

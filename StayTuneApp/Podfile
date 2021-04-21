@@ -5,10 +5,10 @@ target 'StayTuneApp' do
   # Comment the next line if you don't want to use dynamic frameworks
 use_frameworks!
 
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Firestore'
-  pod 'Firebase/Core'
+  pod 'SwiftGen'
+  pod 'KeychainAccess'
+  pod 'Alamofire'
+  pod 'Kingfisher'
 
   # Pods for StayTuneApp
   pod 'SnapKit', '~> 5.0.0'

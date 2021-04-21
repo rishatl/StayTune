@@ -7,27 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26691EAB8B99C52EA48DEA01 /* Pods_StayTuneAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1262C9BE11160BC91ED9826 /* Pods_StayTuneAppTests.framework */; };
-		4503A2C52601197500AF7179 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503A2C42601197500AF7179 /* SignUpPresenter.swift */; };
-		4503A2CB26011A1800AF7179 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503A2CA26011A1800AF7179 /* LoginPresenter.swift */; };
+		03623A79DF902F160B2FB286 /* Pods_StayTuneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66DAE40914AB14A0AC9245F /* Pods_StayTuneApp.framework */; };
+		4506162E2621E52700B41932 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506162D2621E52700B41932 /* DateFormatter.swift */; };
+		4507E05F260896180042788C /* TextFieldUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4507E05E260896180042788C /* TextFieldUtilities.swift */; };
+		4507E067260897CE0042788C /* FilledButtonUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4507E066260897CE0042788C /* FilledButtonUtilities.swift */; };
+		4507E06C260898110042788C /* HollowButtonUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4507E06B260898110042788C /* HollowButtonUtilities.swift */; };
+		4517FC742620CAFE0000232B /* ConcertsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517FC732620CAFE0000232B /* ConcertsTableViewCell.swift */; };
+		4517FC792620CB1F0000232B /* ConcertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517FC782620CB1F0000232B /* ConcertsViewController.swift */; };
+		4517FC7E2620CB420000232B /* ConcertsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517FC7D2620CB420000232B /* ConcertsItemViewController.swift */; };
+		4517FC832620CB600000232B /* BatchActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517FC822620CB600000232B /* BatchActionsViewController.swift */; };
+		4517FC8E2620CE620000232B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517FC8D2620CE620000232B /* Event.swift */; };
+		4517FCA92620E7770000232B /* EntityTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517FCA82620E7770000232B /* EntityTypes.swift */; };
+		4523338B260B384000E7C5EA /* Concerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4523338A260B384000E7C5EA /* Concerts.storyboard */; };
+		45233390260B386000E7C5EA /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4523338F260B386000E7C5EA /* Settings.storyboard */; };
+		45233395260B387000E7C5EA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45233394260B387000E7C5EA /* Profile.storyboard */; };
+		4523339A260B38DF00E7C5EA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45233399260B38DF00E7C5EA /* ProfileViewController.swift */; };
+		452333A9260B3CB600E7C5EA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452333A8260B3CB600E7C5EA /* MainCoordinator.swift */; };
+		452333B3260B413100E7C5EA /* ConcertsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452333B2260B413100E7C5EA /* ConcertsCoordinator.swift */; };
+		45285F372609D7EB00EBD483 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45285F362609D7EB00EBD483 /* LoginService.swift */; };
+		4536C72C261CA28200F2D3CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4536C72B261CA28200F2D3CD /* User.swift */; };
 		4539B79125FEAFCC0007C434 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4539B79025FEAFCC0007C434 /* GoogleService-Info.plist */; };
 		4539B79225FEAFCC0007C434 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4539B79025FEAFCC0007C434 /* GoogleService-Info.plist */; };
 		4539B79325FEAFCC0007C434 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4539B79025FEAFCC0007C434 /* GoogleService-Info.plist */; };
 		453AF9F325EBBC9900D9E0B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453AF9F225EBBC9900D9E0B2 /* AppDelegate.swift */; };
 		453AF9F725EBBC9900D9E0B2 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453AF9F625EBBC9900D9E0B2 /* StartViewController.swift */; };
 		453AF9FA25EBBC9900D9E0B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453AF9F825EBBC9900D9E0B2 /* Main.storyboard */; };
-		453AF9FD25EBBC9900D9E0B2 /* StayTuneApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 453AF9FB25EBBC9900D9E0B2 /* StayTuneApp.xcdatamodeld */; };
 		453AF9FF25EBBC9B00D9E0B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453AF9FE25EBBC9B00D9E0B2 /* Assets.xcassets */; };
 		453AFA0225EBBC9C00D9E0B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453AFA0025EBBC9C00D9E0B2 /* LaunchScreen.storyboard */; };
 		453AFA0D25EBBC9C00D9E0B2 /* StayTuneAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453AFA0C25EBBC9C00D9E0B2 /* StayTuneAppTests.swift */; };
 		453AFA1825EBBC9C00D9E0B2 /* StayTuneAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453AFA1725EBBC9C00D9E0B2 /* StayTuneAppUITests.swift */; };
-		455309E525FE0F65004895AB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455309E425FE0F65004895AB /* Utilities.swift */; };
-		457E36F025F91D44005F921A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E36EF25F91D44005F921A /* HomeViewController.swift */; };
+		4556ED232621DEDF00AF447B /* StayTuneApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4556ED212621DEDF00AF447B /* StayTuneApp.xcdatamodeld */; };
+		4556ED332621E32900AF447B /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556ED322621E32900AF447B /* SignUpService.swift */; };
+		4556ED392621E35C00AF447B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556ED372621E35C00AF447B /* LoginPresenter.swift */; };
+		4556ED3A2621E35C00AF447B /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556ED382621E35C00AF447B /* SignUpPresenter.swift */; };
+		455D38E0262357FB001701DA /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D38DF262357FB001701DA /* UserResponse.swift */; };
+		4578102F260C5C20006B573F /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4578102E260C5C20006B573F /* SettingsCoordinator.swift */; };
+		45781037260C5C35006B573F /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45781036260C5C35006B573F /* ProfileCoordinator.swift */; };
+		45AEC2ED260D1BC5006287A3 /* PasswordValid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AEC2EC260D1BC5006287A3 /* PasswordValid.swift */; };
+		45AEC2F5260D1CA5006287A3 /* AuthorizationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AEC2F4260D1CA5006287A3 /* AuthorizationErrors.swift */; };
 		45AFD1C025F8C1D400C35DC3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFD1BF25F8C1D400C35DC3 /* LoginViewController.swift */; };
 		45AFD1C525F8C1E400C35DC3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFD1C425F8C1E400C35DC3 /* SignUpViewController.swift */; };
 		45AFD1DE25F8E35F00C35DC3 /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFD1DD25F8E35F00C35DC3 /* AuthorizationCoordinator.swift */; };
-		94FF57796EBE8997ED35BFCF /* Pods_StayTuneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA936086CA84FDA3DD463C3 /* Pods_StayTuneApp.framework */; };
-		BED628CD63A39B5DC3B896EA /* Pods_StayTuneApp_StayTuneAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83803C797E4B226D72D901DE /* Pods_StayTuneApp_StayTuneAppUITests.framework */; };
+		45CEE3FC2628616100265FB8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CEE3FB2628616100265FB8 /* SettingsViewController.swift */; };
+		45CEE4022628646400265FB8 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CEE4012628646400265FB8 /* SettingsCell.swift */; };
+		4768F81B03BDD4C96AC13C78 /* Pods_StayTuneAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135EBF551D5509A06E8DFA77 /* Pods_StayTuneAppTests.framework */; };
+		78D5C631B487C6BE632CF5E8 /* Pods_StayTuneApp_StayTuneAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7E29497DF166D427807834 /* Pods_StayTuneApp_StayTuneAppUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,16 +72,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24FD2F242B6E211B62F2DB46 /* Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig"; path = "Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		3FA936086CA84FDA3DD463C3 /* Pods_StayTuneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StayTuneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4503A2C42601197500AF7179 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
-		4503A2CA26011A1800AF7179 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		0D95B3D12628FC24BF55DC98 /* Pods-StayTuneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneApp.debug.xcconfig"; path = "Target Support Files/Pods-StayTuneApp/Pods-StayTuneApp.debug.xcconfig"; sourceTree = "<group>"; };
+		135EBF551D5509A06E8DFA77 /* Pods_StayTuneAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StayTuneAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17985D442BE7F5731B61F525 /* Pods-StayTuneAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneAppTests.debug.xcconfig"; path = "Target Support Files/Pods-StayTuneAppTests/Pods-StayTuneAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1AABFEAB6FC7288B1A9F3D4E /* Pods-StayTuneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneApp.release.xcconfig"; path = "Target Support Files/Pods-StayTuneApp/Pods-StayTuneApp.release.xcconfig"; sourceTree = "<group>"; };
+		4506162D2621E52700B41932 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		4507E05E260896180042788C /* TextFieldUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldUtilities.swift; sourceTree = "<group>"; };
+		4507E066260897CE0042788C /* FilledButtonUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButtonUtilities.swift; sourceTree = "<group>"; };
+		4507E06B260898110042788C /* HollowButtonUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HollowButtonUtilities.swift; sourceTree = "<group>"; };
+		4517FC732620CAFE0000232B /* ConcertsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertsTableViewCell.swift; sourceTree = "<group>"; };
+		4517FC782620CB1F0000232B /* ConcertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertsViewController.swift; sourceTree = "<group>"; };
+		4517FC7D2620CB420000232B /* ConcertsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertsItemViewController.swift; sourceTree = "<group>"; };
+		4517FC822620CB600000232B /* BatchActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchActionsViewController.swift; sourceTree = "<group>"; };
+		4517FC8D2620CE620000232B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		4517FCA82620E7770000232B /* EntityTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityTypes.swift; sourceTree = "<group>"; };
+		4523338A260B384000E7C5EA /* Concerts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Concerts.storyboard; sourceTree = "<group>"; };
+		4523338F260B386000E7C5EA /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		45233394260B387000E7C5EA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		45233399260B38DF00E7C5EA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		452333A8260B3CB600E7C5EA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		452333B2260B413100E7C5EA /* ConcertsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertsCoordinator.swift; sourceTree = "<group>"; };
+		45285F362609D7EB00EBD483 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		4536C72B261CA28200F2D3CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4539B79025FEAFCC0007C434 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		453AF9EF25EBBC9900D9E0B2 /* StayTuneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayTuneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		453AF9F225EBBC9900D9E0B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		453AF9F625EBBC9900D9E0B2 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		453AF9F925EBBC9900D9E0B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		453AF9FC25EBBC9900D9E0B2 /* StayTuneApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StayTuneApp.xcdatamodel; sourceTree = "<group>"; };
 		453AF9FE25EBBC9B00D9E0B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		453AFA0125EBBC9C00D9E0B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		453AFA0325EBBC9C00D9E0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,18 +108,25 @@
 		453AFA1325EBBC9C00D9E0B2 /* StayTuneAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StayTuneAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		453AFA1725EBBC9C00D9E0B2 /* StayTuneAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayTuneAppUITests.swift; sourceTree = "<group>"; };
 		453AFA1925EBBC9C00D9E0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		455309E425FE0F65004895AB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		457E36EF25F91D44005F921A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4556ED222621DEDF00AF447B /* StayTuneApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StayTuneApp.xcdatamodel; sourceTree = "<group>"; };
+		4556ED322621E32900AF447B /* SignUpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		4556ED372621E35C00AF447B /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Presenters/LoginPresenter.swift; sourceTree = "<group>"; };
+		4556ED382621E35C00AF447B /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpPresenter.swift; path = Presenters/SignUpPresenter.swift; sourceTree = "<group>"; };
+		455D38DF262357FB001701DA /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		4578102E260C5C20006B573F /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		45781036260C5C35006B573F /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		45AEC2EC260D1BC5006287A3 /* PasswordValid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValid.swift; sourceTree = "<group>"; };
+		45AEC2F4260D1CA5006287A3 /* AuthorizationErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationErrors.swift; sourceTree = "<group>"; };
 		45AFD1BF25F8C1D400C35DC3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		45AFD1C425F8C1E400C35DC3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		45AFD1DD25F8E35F00C35DC3 /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
-		6A18E6D961435D2E7D886B26 /* Pods-StayTuneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneApp.release.xcconfig"; path = "Target Support Files/Pods-StayTuneApp/Pods-StayTuneApp.release.xcconfig"; sourceTree = "<group>"; };
-		6AB81A98EA73302DA2D1B63C /* Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7438A1DBED1273E8FF55E196 /* Pods-StayTuneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneApp.debug.xcconfig"; path = "Target Support Files/Pods-StayTuneApp/Pods-StayTuneApp.debug.xcconfig"; sourceTree = "<group>"; };
-		83803C797E4B226D72D901DE /* Pods_StayTuneApp_StayTuneAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StayTuneApp_StayTuneAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1262C9BE11160BC91ED9826 /* Pods_StayTuneAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StayTuneAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C289A0D1F3A16E10A62455D8 /* Pods-StayTuneAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneAppTests.debug.xcconfig"; path = "Target Support Files/Pods-StayTuneAppTests/Pods-StayTuneAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C687A8C1983FB492C800C58B /* Pods-StayTuneAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneAppTests.release.xcconfig"; path = "Target Support Files/Pods-StayTuneAppTests/Pods-StayTuneAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		45CEE3FB2628616100265FB8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		45CEE4012628646400265FB8 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		8C7E29497DF166D427807834 /* Pods_StayTuneApp_StayTuneAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StayTuneApp_StayTuneAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A41E1294E7F2869B7C234D09 /* Pods-StayTuneAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneAppTests.release.xcconfig"; path = "Target Support Files/Pods-StayTuneAppTests/Pods-StayTuneAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		A86A3C22A8E10B2682A1E8E9 /* Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig"; path = "Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B2E762945743E05D86D87CA3 /* Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F66DAE40914AB14A0AC9245F /* Pods_StayTuneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StayTuneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94FF57796EBE8997ED35BFCF /* Pods_StayTuneApp.framework in Frameworks */,
+				03623A79DF902F160B2FB286 /* Pods_StayTuneApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26691EAB8B99C52EA48DEA01 /* Pods_StayTuneAppTests.framework in Frameworks */,
+				4768F81B03BDD4C96AC13C78 /* Pods_StayTuneAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BED628CD63A39B5DC3B896EA /* Pods_StayTuneApp_StayTuneAppUITests.framework in Frameworks */,
+				78D5C631B487C6BE632CF5E8 /* Pods_StayTuneApp_StayTuneAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,12 +160,12 @@
 		171B1132316E84E7ECA39438 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7438A1DBED1273E8FF55E196 /* Pods-StayTuneApp.debug.xcconfig */,
-				6A18E6D961435D2E7D886B26 /* Pods-StayTuneApp.release.xcconfig */,
-				6AB81A98EA73302DA2D1B63C /* Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig */,
-				24FD2F242B6E211B62F2DB46 /* Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig */,
-				C289A0D1F3A16E10A62455D8 /* Pods-StayTuneAppTests.debug.xcconfig */,
-				C687A8C1983FB492C800C58B /* Pods-StayTuneAppTests.release.xcconfig */,
+				0D95B3D12628FC24BF55DC98 /* Pods-StayTuneApp.debug.xcconfig */,
+				1AABFEAB6FC7288B1A9F3D4E /* Pods-StayTuneApp.release.xcconfig */,
+				B2E762945743E05D86D87CA3 /* Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig */,
+				A86A3C22A8E10B2682A1E8E9 /* Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig */,
+				17985D442BE7F5731B61F525 /* Pods-StayTuneAppTests.debug.xcconfig */,
+				A41E1294E7F2869B7C234D09 /* Pods-StayTuneAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -128,7 +176,6 @@
 				453AF9F625EBBC9900D9E0B2 /* StartViewController.swift */,
 				45AFD1BF25F8C1D400C35DC3 /* LoginViewController.swift */,
 				45AFD1C425F8C1E400C35DC3 /* SignUpViewController.swift */,
-				457E36EF25F91D44005F921A /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -136,15 +183,51 @@
 		4503A2D026011A2700AF7179 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				4503A2CA26011A1800AF7179 /* LoginPresenter.swift */,
-				4503A2C42601197500AF7179 /* SignUpPresenter.swift */,
+				4556ED372621E35C00AF447B /* LoginPresenter.swift */,
+				4556ED382621E35C00AF447B /* SignUpPresenter.swift */,
 			);
 			name = Presenters;
+			sourceTree = "<group>";
+		};
+		4506162C2621E52700B41932 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4506162D2621E52700B41932 /* DateFormatter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4507E063260897840042788C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4507E065260897970042788C /* Button */,
+				4507E0642608978F0042788C /* TextField */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4507E0642608978F0042788C /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				4507E05E260896180042788C /* TextFieldUtilities.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		4507E065260897970042788C /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				4507E066260897CE0042788C /* FilledButtonUtilities.swift */,
+				4507E06B260898110042788C /* HollowButtonUtilities.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		4516D6DF25F911D100E14496 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				45AEC2EA260D1B67006287A3 /* TabBar */,
+				45233361260B317300E7C5EA /* Authorization */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -152,11 +235,192 @@
 		4516D6E125F911EE00E14496 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				455309E325FE0F47004895AB /* Helpers */,
 				4503A2D026011A2700AF7179 /* Presenters */,
 				4503A2CF26011A1E00AF7179 /* ViewControllers */,
+				45C3A25625EFCBFC0058529D /* Coordinator */,
+				45C3A25025EFCBBD0058529D /* Storyboard */,
 			);
 			path = Authorization;
+			sourceTree = "<group>";
+		};
+		4517FC722620CAB20000232B /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				4517FC732620CAFE0000232B /* ConcertsTableViewCell.swift */,
+				4517FC782620CB1F0000232B /* ConcertsViewController.swift */,
+				4517FC7D2620CB420000232B /* ConcertsItemViewController.swift */,
+				4517FC822620CB600000232B /* BatchActionsViewController.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		45233357260B2C2C00E7C5EA /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4523335E260B311900E7C5EA /* Concerts */,
+				45233365260B33D000E7C5EA /* Settings */,
+				45233376260B349900E7C5EA /* Profile */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		4523335E260B311900E7C5EA /* Concerts */ = {
+			isa = PBXGroup;
+			children = (
+				45233360260B315C00E7C5EA /* Presenters */,
+				4523335F260B314C00E7C5EA /* ViewControllers */,
+				45233363260B32A700E7C5EA /* Coordinator */,
+				45233364260B32B100E7C5EA /* Storyboard */,
+			);
+			path = Concerts;
+			sourceTree = "<group>";
+		};
+		4523335F260B314C00E7C5EA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4517FC722620CAB20000232B /* Events */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		45233360260B315C00E7C5EA /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		45233361260B317300E7C5EA /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				45AEC2EB260D1B95006287A3 /* Helpers */,
+				45285F362609D7EB00EBD483 /* LoginService.swift */,
+				4556ED322621E32900AF447B /* SignUpService.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		45233362260B318500E7C5EA /* Concerts */ = {
+			isa = PBXGroup;
+			children = (
+				4506162C2621E52700B41932 /* Helpers */,
+			);
+			path = Concerts;
+			sourceTree = "<group>";
+		};
+		45233363260B32A700E7C5EA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				452333B2260B413100E7C5EA /* ConcertsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		45233364260B32B100E7C5EA /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4523338A260B384000E7C5EA /* Concerts.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		45233365260B33D000E7C5EA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4523336D260B347200E7C5EA /* Presenters */,
+				45CEE4002628644D00265FB8 /* View */,
+				45233369260B346100E7C5EA /* ViewControllers */,
+				45233371260B347C00E7C5EA /* Coordinator */,
+				45233372260B348700E7C5EA /* Storyboard */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		45233369260B346100E7C5EA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				45CEE3FB2628616100265FB8 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4523336D260B347200E7C5EA /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		45233371260B347C00E7C5EA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				4578102E260C5C20006B573F /* SettingsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		45233372260B348700E7C5EA /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4523338F260B386000E7C5EA /* Settings.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		45233376260B349900E7C5EA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				45233383260B34C100E7C5EA /* Presenters */,
+				4523337F260B34B700E7C5EA /* ViewControllers */,
+				4523337E260B34B000E7C5EA /* Coordinator */,
+				4523337A260B34A000E7C5EA /* Storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4523337A260B34A000E7C5EA /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				45233394260B387000E7C5EA /* Profile.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		4523337E260B34B000E7C5EA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				45781036260C5C35006B573F /* ProfileCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		4523337F260B34B700E7C5EA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				45233399260B38DF00E7C5EA /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		45233383260B34C100E7C5EA /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		452333B0260B3DD300E7C5EA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		452333B1260B3DD900E7C5EA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		453AF9E625EBBC9900D9E0B2 = {
@@ -167,7 +431,7 @@
 				453AFA1625EBBC9C00D9E0B2 /* StayTuneAppUITests */,
 				453AF9F025EBBC9900D9E0B2 /* Products */,
 				171B1132316E84E7ECA39438 /* Pods */,
-				CCBA2AF870DD1FE9CE1B8743 /* Frameworks */,
+				4FEB4EF35DDCC25BB4209847 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,15 +448,16 @@
 		453AF9F125EBBC9900D9E0B2 /* StayTuneApp */ = {
 			isa = PBXGroup;
 			children = (
-				45C3A24F25EFCBB20058529D /* AppDelegate */,
-				45C3A25025EFCBBD0058529D /* Storyboards */,
-				45C3A25625EFCBFC0058529D /* Coordinators */,
+				452333A8260B3CB600E7C5EA /* MainCoordinator.swift */,
+				4507E063260897840042788C /* Views */,
 				45C3A25425EFCBE80058529D /* Modules */,
-				45C3A25225EFCBD80058529D /* Models */,
+				4556C1EC261C39F000A1C76A /* Models */,
 				4516D6DF25F911D100E14496 /* Services */,
+				45C3A24F25EFCBB20058529D /* AppDelegate */,
 				45C3A25125EFCBCE0058529D /* Resources */,
+				453AFA0025EBBC9C00D9E0B2 /* LaunchScreen.storyboard */,
+				4556ED212621DEDF00AF447B /* StayTuneApp.xcdatamodeld */,
 				453AFA0325EBBC9C00D9E0B2 /* Info.plist */,
-				453AF9FB25EBBC9900D9E0B2 /* StayTuneApp.xcdatamodeld */,
 			);
 			path = StayTuneApp;
 			sourceTree = "<group>";
@@ -216,10 +481,32 @@
 			path = StayTuneAppUITests;
 			sourceTree = "<group>";
 		};
-		455309E325FE0F47004895AB /* Helpers */ = {
+		4556C1EC261C39F000A1C76A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				455309E425FE0F65004895AB /* Utilities.swift */,
+				4536C72B261CA28200F2D3CD /* User.swift */,
+				4517FC8D2620CE620000232B /* Event.swift */,
+				4517FCA82620E7770000232B /* EntityTypes.swift */,
+				455D38DF262357FB001701DA /* UserResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		45AEC2EA260D1B67006287A3 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				452333B1260B3DD900E7C5EA /* Profile */,
+				452333B0260B3DD300E7C5EA /* Settings */,
+				45233362260B318500E7C5EA /* Concerts */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		45AEC2EB260D1B95006287A3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				45AEC2EC260D1BC5006287A3 /* PasswordValid.swift */,
+				45AEC2F4260D1CA5006287A3 /* AuthorizationErrors.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -232,13 +519,12 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		45C3A25025EFCBBD0058529D /* Storyboards */ = {
+		45C3A25025EFCBBD0058529D /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				453AFA0025EBBC9C00D9E0B2 /* LaunchScreen.storyboard */,
 				453AF9F825EBBC9900D9E0B2 /* Main.storyboard */,
 			);
-			path = Storyboards;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		45C3A25125EFCBCE0058529D /* Resources */ = {
@@ -249,35 +535,37 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		45C3A25225EFCBD80058529D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		45C3A25425EFCBE80058529D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				45233357260B2C2C00E7C5EA /* TabBar */,
 				4516D6E125F911EE00E14496 /* Authorization */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		45C3A25625EFCBFC0058529D /* Coordinators */ = {
+		45C3A25625EFCBFC0058529D /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				45AFD1DD25F8E35F00C35DC3 /* AuthorizationCoordinator.swift */,
 			);
-			path = Coordinators;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		CCBA2AF870DD1FE9CE1B8743 /* Frameworks */ = {
+		45CEE4002628644D00265FB8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3FA936086CA84FDA3DD463C3 /* Pods_StayTuneApp.framework */,
-				83803C797E4B226D72D901DE /* Pods_StayTuneApp_StayTuneAppUITests.framework */,
-				C1262C9BE11160BC91ED9826 /* Pods_StayTuneAppTests.framework */,
+				45CEE4012628646400265FB8 /* SettingsCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4FEB4EF35DDCC25BB4209847 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F66DAE40914AB14A0AC9245F /* Pods_StayTuneApp.framework */,
+				8C7E29497DF166D427807834 /* Pods_StayTuneApp_StayTuneAppUITests.framework */,
+				135EBF551D5509A06E8DFA77 /* Pods_StayTuneAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -289,12 +577,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 453AFA1C25EBBC9C00D9E0B2 /* Build configuration list for PBXNativeTarget "StayTuneApp" */;
 			buildPhases = (
-				1BAD429F76E16818BF3E0902 /* [CP] Check Pods Manifest.lock */,
-				451B789925F79B150092C861 /* Swiftlint */,
+				0C1E722FDE3134D5019E9E37 /* [CP] Check Pods Manifest.lock */,
 				453AF9EB25EBBC9900D9E0B2 /* Sources */,
 				453AF9EC25EBBC9900D9E0B2 /* Frameworks */,
 				453AF9ED25EBBC9900D9E0B2 /* Resources */,
-				D4C6A9A66FA0808CF27BF456 /* [CP] Embed Pods Frameworks */,
+				F31BF6E259AAFB66855CFC9F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,7 +596,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 453AFA1F25EBBC9C00D9E0B2 /* Build configuration list for PBXNativeTarget "StayTuneAppTests" */;
 			buildPhases = (
-				B5C29C68432B733C421B99E7 /* [CP] Check Pods Manifest.lock */,
+				054B12D8AF049D804D55369B /* [CP] Check Pods Manifest.lock */,
 				453AFA0425EBBC9C00D9E0B2 /* Sources */,
 				453AFA0525EBBC9C00D9E0B2 /* Frameworks */,
 				453AFA0625EBBC9C00D9E0B2 /* Resources */,
@@ -328,11 +615,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 453AFA2225EBBC9C00D9E0B2 /* Build configuration list for PBXNativeTarget "StayTuneAppUITests" */;
 			buildPhases = (
-				C01C2F9F6ADF485FD26A818D /* [CP] Check Pods Manifest.lock */,
+				1EAACDD6568B8828E7CAC613 /* [CP] Check Pods Manifest.lock */,
 				453AFA0F25EBBC9C00D9E0B2 /* Sources */,
 				453AFA1025EBBC9C00D9E0B2 /* Frameworks */,
 				453AFA1125EBBC9C00D9E0B2 /* Resources */,
-				4A566E4F3CF97ABDB883622B /* [CP] Embed Pods Frameworks */,
+				5F335677B7EA0C62FE829A75 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -392,9 +679,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				453AFA0225EBBC9C00D9E0B2 /* LaunchScreen.storyboard in Resources */,
+				45233395260B387000E7C5EA /* Profile.storyboard in Resources */,
 				4539B79125FEAFCC0007C434 /* GoogleService-Info.plist in Resources */,
 				453AF9FF25EBBC9B00D9E0B2 /* Assets.xcassets in Resources */,
 				453AF9FA25EBBC9900D9E0B2 /* Main.storyboard in Resources */,
+				4523338B260B384000E7C5EA /* Concerts.storyboard in Resources */,
+				45233390260B386000E7C5EA /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,64 +707,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1BAD429F76E16818BF3E0902 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-StayTuneApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		451B789925F79B150092C861 /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		4A566E4F3CF97ABDB883622B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B5C29C68432B733C421B99E7 /* [CP] Check Pods Manifest.lock */ = {
+		054B12D8AF049D804D55369B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -496,7 +729,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C01C2F9F6ADF485FD26A818D /* [CP] Check Pods Manifest.lock */ = {
+		0C1E722FDE3134D5019E9E37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StayTuneApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1EAACDD6568B8828E7CAC613 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -518,7 +773,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D4C6A9A66FA0808CF27BF456 /* [CP] Embed Pods Frameworks */ = {
+		5F335677B7EA0C62FE829A75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F31BF6E259AAFB66855CFC9F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -542,16 +814,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4503A2C52601197500AF7179 /* SignUpPresenter.swift in Sources */,
+				4517FC742620CAFE0000232B /* ConcertsTableViewCell.swift in Sources */,
+				4556ED232621DEDF00AF447B /* StayTuneApp.xcdatamodeld in Sources */,
 				45AFD1C525F8C1E400C35DC3 /* SignUpViewController.swift in Sources */,
+				45AEC2F5260D1CA5006287A3 /* AuthorizationErrors.swift in Sources */,
+				4556ED332621E32900AF447B /* SignUpService.swift in Sources */,
+				455D38E0262357FB001701DA /* UserResponse.swift in Sources */,
+				4507E05F260896180042788C /* TextFieldUtilities.swift in Sources */,
 				453AF9F725EBBC9900D9E0B2 /* StartViewController.swift in Sources */,
+				4506162E2621E52700B41932 /* DateFormatter.swift in Sources */,
+				4507E06C260898110042788C /* HollowButtonUtilities.swift in Sources */,
 				453AF9F325EBBC9900D9E0B2 /* AppDelegate.swift in Sources */,
-				4503A2CB26011A1800AF7179 /* LoginPresenter.swift in Sources */,
-				453AF9FD25EBBC9900D9E0B2 /* StayTuneApp.xcdatamodeld in Sources */,
+				452333A9260B3CB600E7C5EA /* MainCoordinator.swift in Sources */,
+				45781037260C5C35006B573F /* ProfileCoordinator.swift in Sources */,
+				4517FC832620CB600000232B /* BatchActionsViewController.swift in Sources */,
 				45AFD1C025F8C1D400C35DC3 /* LoginViewController.swift in Sources */,
-				457E36F025F91D44005F921A /* HomeViewController.swift in Sources */,
-				455309E525FE0F65004895AB /* Utilities.swift in Sources */,
+				4517FC7E2620CB420000232B /* ConcertsItemViewController.swift in Sources */,
+				4556ED392621E35C00AF447B /* LoginPresenter.swift in Sources */,
+				4517FCA92620E7770000232B /* EntityTypes.swift in Sources */,
+				4578102F260C5C20006B573F /* SettingsCoordinator.swift in Sources */,
+				4517FC8E2620CE620000232B /* Event.swift in Sources */,
+				452333B3260B413100E7C5EA /* ConcertsCoordinator.swift in Sources */,
+				4507E067260897CE0042788C /* FilledButtonUtilities.swift in Sources */,
+				4517FC792620CB1F0000232B /* ConcertsViewController.swift in Sources */,
+				45CEE3FC2628616100265FB8 /* SettingsViewController.swift in Sources */,
+				45CEE4022628646400265FB8 /* SettingsCell.swift in Sources */,
+				4523339A260B38DF00E7C5EA /* ProfileViewController.swift in Sources */,
 				45AFD1DE25F8E35F00C35DC3 /* AuthorizationCoordinator.swift in Sources */,
+				45285F372609D7EB00EBD483 /* LoginService.swift in Sources */,
+				45AEC2ED260D1BC5006287A3 /* PasswordValid.swift in Sources */,
+				4556ED3A2621E35C00AF447B /* SignUpPresenter.swift in Sources */,
+				4536C72C261CA28200F2D3CD /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,11 +1017,12 @@
 		};
 		453AFA1D25EBBC9C00D9E0B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7438A1DBED1273E8FF55E196 /* Pods-StayTuneApp.debug.xcconfig */;
+			baseConfigurationReference = 0D95B3D12628FC24BF55DC98 /* Pods-StayTuneApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2JV5VMA42;
 				INFOPLIST_FILE = StayTuneApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -744,11 +1038,12 @@
 		};
 		453AFA1E25EBBC9C00D9E0B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A18E6D961435D2E7D886B26 /* Pods-StayTuneApp.release.xcconfig */;
+			baseConfigurationReference = 1AABFEAB6FC7288B1A9F3D4E /* Pods-StayTuneApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2JV5VMA42;
 				INFOPLIST_FILE = StayTuneApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -764,7 +1059,7 @@
 		};
 		453AFA2025EBBC9C00D9E0B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C289A0D1F3A16E10A62455D8 /* Pods-StayTuneAppTests.debug.xcconfig */;
+			baseConfigurationReference = 17985D442BE7F5731B61F525 /* Pods-StayTuneAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -786,7 +1081,7 @@
 		};
 		453AFA2125EBBC9C00D9E0B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C687A8C1983FB492C800C58B /* Pods-StayTuneAppTests.release.xcconfig */;
+			baseConfigurationReference = A41E1294E7F2869B7C234D09 /* Pods-StayTuneAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -808,7 +1103,7 @@
 		};
 		453AFA2325EBBC9C00D9E0B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AB81A98EA73302DA2D1B63C /* Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig */;
+			baseConfigurationReference = B2E762945743E05D86D87CA3 /* Pods-StayTuneApp-StayTuneAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -828,7 +1123,7 @@
 		};
 		453AFA2425EBBC9C00D9E0B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24FD2F242B6E211B62F2DB46 /* Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig */;
+			baseConfigurationReference = A86A3C22A8E10B2682A1E8E9 /* Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -888,14 +1183,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		453AF9FB25EBBC9900D9E0B2 /* StayTuneApp.xcdatamodeld */ = {
+		4556ED212621DEDF00AF447B /* StayTuneApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				453AF9FC25EBBC9900D9E0B2 /* StayTuneApp.xcdatamodel */,
+				4556ED222621DEDF00AF447B /* StayTuneApp.xcdatamodel */,
 			);
-			currentVersion = 453AF9FC25EBBC9900D9E0B2 /* StayTuneApp.xcdatamodel */;
+			currentVersion = 4556ED222621DEDF00AF447B /* StayTuneApp.xcdatamodel */;
 			path = StayTuneApp.xcdatamodeld;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */

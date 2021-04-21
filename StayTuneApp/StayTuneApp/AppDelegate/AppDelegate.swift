@@ -7,22 +7,28 @@
 
 import UIKit
 import CoreData
-import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var mainCoordinator: MainCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Custom NavigationBar
         UINavigationBar.appearance().barTintColor = UIColor(red: 37.0 / 255.0, green: 37.0 / 255.0, blue: 37.0 / 255.0, alpha: 1)
         UINavigationBar.appearance().tintColor = UIColor(red: 255.0 / 255.0, green: 195.0 / 255.0, blue: 42.0 / 255.0, alpha: 1)
-        UINavigationBar.appearance().isTranslucent = false
-
-        window = UIWindow(frame: UIScreen.main.bounds )
-        window?.rootViewController = AuthorizationCoordinator().startViewController()
-        window?.makeKeyAndVisible()
-        FirebaseApp.configure()
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 255.0 / 255.0, green: 195.0 / 255.0, blue: 42.0 / 255.0, alpha: 1)]
+        UINavigationBar.appearance().prefersLargeTitles = true
+        UINavigationBar.appearance().shadowImage = UIImage()
+        // Custom TabBar
+        UITabBar.appearance().barTintColor = UIColor(red: 37.0 / 255.0, green: 37.0 / 255.0, blue: 37.0 / 255.0, alpha: 1)
+        UITabBar.appearance().unselectedItemTintColor = .white
+        UITabBar.appearance().tintColor = UIColor(red: 255.0 / 255.0, green: 195.0 / 255.0, blue: 42.0 / 255.0, alpha: 1)
+        UITabBar.appearance().backgroundColor = UIColor(red: 255.0 / 255.0, green: 195.0 / 255.0, blue: 42.0 / 255.0, alpha: 1)
+        UITabBar.appearance().isTranslucent = false
+        
+        mainCoordinator = MainCoordinator()
+        mainCoordinator?.start()
         return true
     }
 
