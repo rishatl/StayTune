@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManager
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         mainCoordinator = MainCoordinator()
         mainCoordinator?.start()
+
+        IQKeyboardManager.shared().isEnabled = true
         return true
     }
 
@@ -40,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          creates and returns a container, having loaded the store for the
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
-        */
+         */
         let container = NSPersistentContainer(name: "StayTuneApp")
         container.loadPersistentStores(completionHandler: { storeDescription, error in
             if let error = error as NSError? {
@@ -78,13 +81,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension UITextField {
-   @IBInspectable var placeHolderColor: UIColor? {
+    @IBInspectable var placeHolderColor: UIColor? {
         get {
             return self.placeHolderColor
         }
         set {
             self.attributedPlaceholder = NSAttributedString(string: self.placeholder != nil ?
-            self.placeholder! : "", attributes: [NSAttributedString.Key.foregroundColor: newValue!])
+                                                                self.placeholder! : "", attributes: [NSAttributedString.Key.foregroundColor: newValue!])
         }
     }
 }

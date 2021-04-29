@@ -15,11 +15,8 @@
 		4517FC742620CAFE0000232B /* ConcertsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517FC732620CAFE0000232B /* ConcertsTableViewCell.swift */; };
 		4517FC792620CB1F0000232B /* ConcertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517FC782620CB1F0000232B /* ConcertsViewController.swift */; };
 		4517FC7E2620CB420000232B /* ConcertsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517FC7D2620CB420000232B /* ConcertsItemViewController.swift */; };
-		4517FC832620CB600000232B /* BatchActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517FC822620CB600000232B /* BatchActionsViewController.swift */; };
-		4517FC8E2620CE620000232B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517FC8D2620CE620000232B /* Event.swift */; };
-		4517FCA92620E7770000232B /* EntityTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517FCA82620E7770000232B /* EntityTypes.swift */; };
+		45189045263ADB0600BDDC7A /* ConcertErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45189044263ADB0600BDDC7A /* ConcertErrors.swift */; };
 		4523338B260B384000E7C5EA /* Concerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4523338A260B384000E7C5EA /* Concerts.storyboard */; };
-		45233390260B386000E7C5EA /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4523338F260B386000E7C5EA /* Settings.storyboard */; };
 		45233395260B387000E7C5EA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45233394260B387000E7C5EA /* Profile.storyboard */; };
 		4523339A260B38DF00E7C5EA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45233399260B38DF00E7C5EA /* ProfileViewController.swift */; };
 		452333A9260B3CB600E7C5EA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452333A8260B3CB600E7C5EA /* MainCoordinator.swift */; };
@@ -41,6 +38,10 @@
 		4556ED392621E35C00AF447B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556ED372621E35C00AF447B /* LoginPresenter.swift */; };
 		4556ED3A2621E35C00AF447B /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556ED382621E35C00AF447B /* SignUpPresenter.swift */; };
 		455D38E0262357FB001701DA /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455D38DF262357FB001701DA /* UserResponse.swift */; };
+		4563FABB2635F6F8004879C8 /* ConcertMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563FAB72635F6F8004879C8 /* ConcertMember.swift */; };
+		4563FABC2635F6F8004879C8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563FAB82635F6F8004879C8 /* Event.swift */; };
+		4563FABD2635F6F8004879C8 /* EntityTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563FAB92635F6F8004879C8 /* EntityTypes.swift */; };
+		4563FABE2635F6F8004879C8 /* ConcertMemberDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563FABA2635F6F8004879C8 /* ConcertMemberDetails.swift */; };
 		4578102F260C5C20006B573F /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4578102E260C5C20006B573F /* SettingsCoordinator.swift */; };
 		45781037260C5C35006B573F /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45781036260C5C35006B573F /* ProfileCoordinator.swift */; };
 		45AEC2ED260D1BC5006287A3 /* PasswordValid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AEC2EC260D1BC5006287A3 /* PasswordValid.swift */; };
@@ -48,8 +49,19 @@
 		45AFD1C025F8C1D400C35DC3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFD1BF25F8C1D400C35DC3 /* LoginViewController.swift */; };
 		45AFD1C525F8C1E400C35DC3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFD1C425F8C1E400C35DC3 /* SignUpViewController.swift */; };
 		45AFD1DE25F8E35F00C35DC3 /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFD1DD25F8E35F00C35DC3 /* AuthorizationCoordinator.swift */; };
-		45CEE3FC2628616100265FB8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CEE3FB2628616100265FB8 /* SettingsViewController.swift */; };
+		45BE34572632B9900028636B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE34562632B9900028636B /* SettingsViewController.swift */; };
+		45BE345D2632BE950028636B /* UserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE345C2632BE950028636B /* UserInfoHeader.swift */; };
+		45BE34632632C6790028636B /* LabelUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE34622632C6790028636B /* LabelUtilities.swift */; };
+		45BE346F2632D41E0028636B /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE346E2632D41E0028636B /* SettingsSection.swift */; };
 		45CEE4022628646400265FB8 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CEE4012628646400265FB8 /* SettingsCell.swift */; };
+		45E974C82635DD8E003AB5AB /* ConcertListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E974C72635DD8E003AB5AB /* ConcertListPresenter.swift */; };
+		45E974CD2635DE21003AB5AB /* ConcertListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E974CC2635DE21003AB5AB /* ConcertListViewController.swift */; };
+		45E974D22635DE43003AB5AB /* ConcertMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E974D12635DE43003AB5AB /* ConcertMemberCell.swift */; };
+		45E974D72635DE63003AB5AB /* ConcertMemberCellPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E974D62635DE63003AB5AB /* ConcertMemberCellPresenterImplementation.swift */; };
+		45E974DE2635DF88003AB5AB /* ConcertMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E974DD2635DF88003AB5AB /* ConcertMemberViewController.swift */; };
+		45E974E62635DFAB003AB5AB /* ConcertMemberPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E974E52635DFAB003AB5AB /* ConcertMemberPresenterImplementation.swift */; };
+		45E974FA2635E07B003AB5AB /* RestConcertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E974F92635E07B003AB5AB /* RestConcertService.swift */; };
+		45E974FF2635E092003AB5AB /* MockConcertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E974FE2635E092003AB5AB /* MockConcertService.swift */; };
 		4768F81B03BDD4C96AC13C78 /* Pods_StayTuneAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135EBF551D5509A06E8DFA77 /* Pods_StayTuneAppTests.framework */; };
 		78D5C631B487C6BE632CF5E8 /* Pods_StayTuneApp_StayTuneAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7E29497DF166D427807834 /* Pods_StayTuneApp_StayTuneAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -83,11 +95,8 @@
 		4517FC732620CAFE0000232B /* ConcertsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertsTableViewCell.swift; sourceTree = "<group>"; };
 		4517FC782620CB1F0000232B /* ConcertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertsViewController.swift; sourceTree = "<group>"; };
 		4517FC7D2620CB420000232B /* ConcertsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertsItemViewController.swift; sourceTree = "<group>"; };
-		4517FC822620CB600000232B /* BatchActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchActionsViewController.swift; sourceTree = "<group>"; };
-		4517FC8D2620CE620000232B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		4517FCA82620E7770000232B /* EntityTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityTypes.swift; sourceTree = "<group>"; };
+		45189044263ADB0600BDDC7A /* ConcertErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertErrors.swift; sourceTree = "<group>"; };
 		4523338A260B384000E7C5EA /* Concerts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Concerts.storyboard; sourceTree = "<group>"; };
-		4523338F260B386000E7C5EA /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		45233394260B387000E7C5EA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		45233399260B38DF00E7C5EA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		452333A8260B3CB600E7C5EA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -113,6 +122,10 @@
 		4556ED372621E35C00AF447B /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Presenters/LoginPresenter.swift; sourceTree = "<group>"; };
 		4556ED382621E35C00AF447B /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpPresenter.swift; path = Presenters/SignUpPresenter.swift; sourceTree = "<group>"; };
 		455D38DF262357FB001701DA /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		4563FAB72635F6F8004879C8 /* ConcertMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConcertMember.swift; path = StayTuneApp/Models/TabBar/Concert/ConcertMember.swift; sourceTree = SOURCE_ROOT; };
+		4563FAB82635F6F8004879C8 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = StayTuneApp/Models/TabBar/Concert/Event.swift; sourceTree = SOURCE_ROOT; };
+		4563FAB92635F6F8004879C8 /* EntityTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntityTypes.swift; path = StayTuneApp/Models/TabBar/Concert/EntityTypes.swift; sourceTree = SOURCE_ROOT; };
+		4563FABA2635F6F8004879C8 /* ConcertMemberDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConcertMemberDetails.swift; path = StayTuneApp/Models/TabBar/Concert/ConcertMemberDetails.swift; sourceTree = SOURCE_ROOT; };
 		4578102E260C5C20006B573F /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		45781036260C5C35006B573F /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		45AEC2EC260D1BC5006287A3 /* PasswordValid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValid.swift; sourceTree = "<group>"; };
@@ -120,8 +133,19 @@
 		45AFD1BF25F8C1D400C35DC3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		45AFD1C425F8C1E400C35DC3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		45AFD1DD25F8E35F00C35DC3 /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
-		45CEE3FB2628616100265FB8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		45BE34562632B9900028636B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		45BE345C2632BE950028636B /* UserInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoHeader.swift; sourceTree = "<group>"; };
+		45BE34622632C6790028636B /* LabelUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelUtilities.swift; sourceTree = "<group>"; };
+		45BE346E2632D41E0028636B /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
 		45CEE4012628646400265FB8 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		45E974C72635DD8E003AB5AB /* ConcertListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertListPresenter.swift; sourceTree = "<group>"; };
+		45E974CC2635DE21003AB5AB /* ConcertListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertListViewController.swift; sourceTree = "<group>"; };
+		45E974D12635DE43003AB5AB /* ConcertMemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertMemberCell.swift; sourceTree = "<group>"; };
+		45E974D62635DE63003AB5AB /* ConcertMemberCellPresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertMemberCellPresenterImplementation.swift; sourceTree = "<group>"; };
+		45E974DD2635DF88003AB5AB /* ConcertMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertMemberViewController.swift; sourceTree = "<group>"; };
+		45E974E52635DFAB003AB5AB /* ConcertMemberPresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertMemberPresenterImplementation.swift; sourceTree = "<group>"; };
+		45E974F92635E07B003AB5AB /* RestConcertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestConcertService.swift; sourceTree = "<group>"; };
+		45E974FE2635E092003AB5AB /* MockConcertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConcertService.swift; sourceTree = "<group>"; };
 		8C7E29497DF166D427807834 /* Pods_StayTuneApp_StayTuneAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StayTuneApp_StayTuneAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41E1294E7F2869B7C234D09 /* Pods-StayTuneAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneAppTests.release.xcconfig"; path = "Target Support Files/Pods-StayTuneAppTests/Pods-StayTuneAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A86A3C22A8E10B2682A1E8E9 /* Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig"; path = "Target Support Files/Pods-StayTuneApp-StayTuneAppUITests/Pods-StayTuneApp-StayTuneAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				4506162D2621E52700B41932 /* DateFormatter.swift */,
+				45189044263ADB0600BDDC7A /* ConcertErrors.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -200,6 +225,7 @@
 		4507E063260897840042788C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				45BE34612632C6670028636B /* Label */,
 				4507E065260897970042788C /* Button */,
 				4507E0642608978F0042788C /* TextField */,
 			);
@@ -249,7 +275,6 @@
 				4517FC732620CAFE0000232B /* ConcertsTableViewCell.swift */,
 				4517FC782620CB1F0000232B /* ConcertsViewController.swift */,
 				4517FC7D2620CB420000232B /* ConcertsItemViewController.swift */,
-				4517FC822620CB600000232B /* BatchActionsViewController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -278,6 +303,8 @@
 		4523335F260B314C00E7C5EA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				45E974EB2635DFD4003AB5AB /* ConcertMember */,
+				45E974EA2635DFC6003AB5AB /* ConcertList */,
 				4517FC722620CAB20000232B /* Events */,
 			);
 			path = ViewControllers;
@@ -286,6 +313,8 @@
 		45233360260B315C00E7C5EA /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				45E974DC2635DF6E003AB5AB /* ConcertMember */,
+				45E974DB2635DF51003AB5AB /* ConcertList */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -304,6 +333,8 @@
 			isa = PBXGroup;
 			children = (
 				4506162C2621E52700B41932 /* Helpers */,
+				45E974F92635E07B003AB5AB /* RestConcertService.swift */,
+				45E974FE2635E092003AB5AB /* MockConcertService.swift */,
 			);
 			path = Concerts;
 			sourceTree = "<group>";
@@ -327,11 +358,11 @@
 		45233365260B33D000E7C5EA /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				45BE346D2632D3F60028636B /* Models */,
 				4523336D260B347200E7C5EA /* Presenters */,
 				45CEE4002628644D00265FB8 /* View */,
 				45233369260B346100E7C5EA /* ViewControllers */,
 				45233371260B347C00E7C5EA /* Coordinator */,
-				45233372260B348700E7C5EA /* Storyboard */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -339,7 +370,7 @@
 		45233369260B346100E7C5EA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				45CEE3FB2628616100265FB8 /* SettingsViewController.swift */,
+				45BE34562632B9900028636B /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -357,14 +388,6 @@
 				4578102E260C5C20006B573F /* SettingsCoordinator.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		45233372260B348700E7C5EA /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				4523338F260B386000E7C5EA /* Settings.storyboard */,
-			);
-			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		45233376260B349900E7C5EA /* Profile */ = {
@@ -484,12 +507,18 @@
 		4556C1EC261C39F000A1C76A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4536C72B261CA28200F2D3CD /* User.swift */,
-				4517FC8D2620CE620000232B /* Event.swift */,
-				4517FCA82620E7770000232B /* EntityTypes.swift */,
-				455D38DF262357FB001701DA /* UserResponse.swift */,
+				4563FAB32635F5AB004879C8 /* TabBar */,
+				45BE34672632D2300028636B /* User */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4563FAB32635F5AB004879C8 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				45BE34692632D2530028636B /* Concert */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		45AEC2EA260D1B67006287A3 /* TabBar */ = {
@@ -509,6 +538,51 @@
 				45AEC2F4260D1CA5006287A3 /* AuthorizationErrors.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		45BE34612632C6670028636B /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				45BE34622632C6790028636B /* LabelUtilities.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		45BE34672632D2300028636B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				4536C72B261CA28200F2D3CD /* User.swift */,
+				45BE34682632D23D0028636B /* UserResponse */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		45BE34682632D23D0028636B /* UserResponse */ = {
+			isa = PBXGroup;
+			children = (
+				455D38DF262357FB001701DA /* UserResponse.swift */,
+			);
+			path = UserResponse;
+			sourceTree = "<group>";
+		};
+		45BE34692632D2530028636B /* Concert */ = {
+			isa = PBXGroup;
+			children = (
+				4563FAB72635F6F8004879C8 /* ConcertMember.swift */,
+				4563FABA2635F6F8004879C8 /* ConcertMemberDetails.swift */,
+				4563FAB92635F6F8004879C8 /* EntityTypes.swift */,
+				4563FAB82635F6F8004879C8 /* Event.swift */,
+			);
+			name = Concert;
+			path = ../Concert;
+			sourceTree = "<group>";
+		};
+		45BE346D2632D3F60028636B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				45BE346E2632D41E0028636B /* SettingsSection.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		45C3A24F25EFCBB20058529D /* AppDelegate */ = {
@@ -556,8 +630,43 @@
 			isa = PBXGroup;
 			children = (
 				45CEE4012628646400265FB8 /* SettingsCell.swift */,
+				45BE345C2632BE950028636B /* UserInfoHeader.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		45E974DB2635DF51003AB5AB /* ConcertList */ = {
+			isa = PBXGroup;
+			children = (
+				45E974D62635DE63003AB5AB /* ConcertMemberCellPresenterImplementation.swift */,
+				45E974C72635DD8E003AB5AB /* ConcertListPresenter.swift */,
+			);
+			path = ConcertList;
+			sourceTree = "<group>";
+		};
+		45E974DC2635DF6E003AB5AB /* ConcertMember */ = {
+			isa = PBXGroup;
+			children = (
+				45E974E52635DFAB003AB5AB /* ConcertMemberPresenterImplementation.swift */,
+			);
+			path = ConcertMember;
+			sourceTree = "<group>";
+		};
+		45E974EA2635DFC6003AB5AB /* ConcertList */ = {
+			isa = PBXGroup;
+			children = (
+				45E974CC2635DE21003AB5AB /* ConcertListViewController.swift */,
+				45E974D12635DE43003AB5AB /* ConcertMemberCell.swift */,
+			);
+			path = ConcertList;
+			sourceTree = "<group>";
+		};
+		45E974EB2635DFD4003AB5AB /* ConcertMember */ = {
+			isa = PBXGroup;
+			children = (
+				45E974DD2635DF88003AB5AB /* ConcertMemberViewController.swift */,
+			);
+			path = ConcertMember;
 			sourceTree = "<group>";
 		};
 		4FEB4EF35DDCC25BB4209847 /* Frameworks */ = {
@@ -684,7 +793,6 @@
 				453AF9FF25EBBC9B00D9E0B2 /* Assets.xcassets in Resources */,
 				453AF9FA25EBBC9900D9E0B2 /* Main.storyboard in Resources */,
 				4523338B260B384000E7C5EA /* Concerts.storyboard in Resources */,
-				45233390260B386000E7C5EA /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,34 +923,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				4517FC742620CAFE0000232B /* ConcertsTableViewCell.swift in Sources */,
+				45E974FF2635E092003AB5AB /* MockConcertService.swift in Sources */,
 				4556ED232621DEDF00AF447B /* StayTuneApp.xcdatamodeld in Sources */,
 				45AFD1C525F8C1E400C35DC3 /* SignUpViewController.swift in Sources */,
+				45BE345D2632BE950028636B /* UserInfoHeader.swift in Sources */,
 				45AEC2F5260D1CA5006287A3 /* AuthorizationErrors.swift in Sources */,
 				4556ED332621E32900AF447B /* SignUpService.swift in Sources */,
 				455D38E0262357FB001701DA /* UserResponse.swift in Sources */,
 				4507E05F260896180042788C /* TextFieldUtilities.swift in Sources */,
+				45189045263ADB0600BDDC7A /* ConcertErrors.swift in Sources */,
+				45BE346F2632D41E0028636B /* SettingsSection.swift in Sources */,
 				453AF9F725EBBC9900D9E0B2 /* StartViewController.swift in Sources */,
 				4506162E2621E52700B41932 /* DateFormatter.swift in Sources */,
 				4507E06C260898110042788C /* HollowButtonUtilities.swift in Sources */,
 				453AF9F325EBBC9900D9E0B2 /* AppDelegate.swift in Sources */,
 				452333A9260B3CB600E7C5EA /* MainCoordinator.swift in Sources */,
 				45781037260C5C35006B573F /* ProfileCoordinator.swift in Sources */,
-				4517FC832620CB600000232B /* BatchActionsViewController.swift in Sources */,
 				45AFD1C025F8C1D400C35DC3 /* LoginViewController.swift in Sources */,
 				4517FC7E2620CB420000232B /* ConcertsItemViewController.swift in Sources */,
+				45E974E62635DFAB003AB5AB /* ConcertMemberPresenterImplementation.swift in Sources */,
 				4556ED392621E35C00AF447B /* LoginPresenter.swift in Sources */,
-				4517FCA92620E7770000232B /* EntityTypes.swift in Sources */,
+				4563FABE2635F6F8004879C8 /* ConcertMemberDetails.swift in Sources */,
+				45BE34632632C6790028636B /* LabelUtilities.swift in Sources */,
+				45E974D72635DE63003AB5AB /* ConcertMemberCellPresenterImplementation.swift in Sources */,
 				4578102F260C5C20006B573F /* SettingsCoordinator.swift in Sources */,
-				4517FC8E2620CE620000232B /* Event.swift in Sources */,
+				45E974CD2635DE21003AB5AB /* ConcertListViewController.swift in Sources */,
+				45E974DE2635DF88003AB5AB /* ConcertMemberViewController.swift in Sources */,
+				45BE34572632B9900028636B /* SettingsViewController.swift in Sources */,
 				452333B3260B413100E7C5EA /* ConcertsCoordinator.swift in Sources */,
 				4507E067260897CE0042788C /* FilledButtonUtilities.swift in Sources */,
+				4563FABD2635F6F8004879C8 /* EntityTypes.swift in Sources */,
 				4517FC792620CB1F0000232B /* ConcertsViewController.swift in Sources */,
-				45CEE3FC2628616100265FB8 /* SettingsViewController.swift in Sources */,
+				4563FABC2635F6F8004879C8 /* Event.swift in Sources */,
 				45CEE4022628646400265FB8 /* SettingsCell.swift in Sources */,
 				4523339A260B38DF00E7C5EA /* ProfileViewController.swift in Sources */,
+				45E974C82635DD8E003AB5AB /* ConcertListPresenter.swift in Sources */,
 				45AFD1DE25F8E35F00C35DC3 /* AuthorizationCoordinator.swift in Sources */,
+				45E974D22635DE43003AB5AB /* ConcertMemberCell.swift in Sources */,
 				45285F372609D7EB00EBD483 /* LoginService.swift in Sources */,
 				45AEC2ED260D1BC5006287A3 /* PasswordValid.swift in Sources */,
+				4563FABB2635F6F8004879C8 /* ConcertMember.swift in Sources */,
+				45E974FA2635E07B003AB5AB /* RestConcertService.swift in Sources */,
 				4556ED3A2621E35C00AF447B /* SignUpPresenter.swift in Sources */,
 				4536C72C261CA28200F2D3CD /* User.swift in Sources */,
 			);

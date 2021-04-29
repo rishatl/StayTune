@@ -11,10 +11,9 @@ import KeychainAccess
 
 class SettingsCoordinator {
     var navigationController = UINavigationController()
-    private let storyboard = UIStoryboard(name: "Settings", bundle: nil)
 
     func settingsController() -> UIViewController {
-        let viewController: SettingsViewController = storyboard.instantiateViewController(identifier: "SettingsViewController")
+        let viewController: SettingsViewController = SettingsViewController()
         viewController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "gear"), tag: 0)
         viewController.toAuthorization = {
             let keychain = Keychain(service: "user_token")

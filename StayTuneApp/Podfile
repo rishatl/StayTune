@@ -9,6 +9,7 @@ use_frameworks!
   pod 'KeychainAccess'
   pod 'Alamofire'
   pod 'Kingfisher'
+  pod 'IQKeyboardManager'
 
   # Pods for StayTuneApp
   pod 'SnapKit', '~> 5.0.0'

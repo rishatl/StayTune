@@ -88,6 +88,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fhO-d1-VvG">
                                 <rect key="frame" x="40" y="249" width="295" height="300.5"/>
                                 <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="4vk-yc-HrO">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="0.0"/>
+                                        <color key="color" red="0.9981678128" green="0.76441103219999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iRT-iq-XQe">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
                                         <constraints>
@@ -164,6 +168,7 @@
                         <outlet property="nameTextField" destination="5qU-Wf-UKO" id="uva-dW-bdV"/>
                         <outlet property="passwordTextField" destination="gGF-pt-Mid" id="Ir6-64-41R"/>
                         <outlet property="signUpButton" destination="SqG-OT-XsR" id="b34-aE-wCw"/>
+                        <outlet property="spinner" destination="4vk-yc-HrO" id="LHa-e5-Yzn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Okp-W1-6tx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -187,6 +192,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0LM-Jw-skn">
                                 <rect key="frame" x="40" y="252" width="295" height="230.5"/>
                                 <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fsR-P4-E7H">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="0.0"/>
+                                        <color key="color" red="0.9981678128" green="0.76441103219999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zkm-I8-0pZ">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -247,6 +256,7 @@
                         <outlet property="loginButton" destination="jX2-zO-dry" id="0Aa-WX-3ex"/>
                         <outlet property="loginTextField" destination="Zkm-I8-0pZ" id="oZB-Pv-thk"/>
                         <outlet property="passwordTextField" destination="9jB-3y-Kcb" id="Izu-zz-VFV"/>
+                        <outlet property="spinner" destination="fsR-P4-E7H" id="Yco-uT-tch"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIb-8D-ypj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

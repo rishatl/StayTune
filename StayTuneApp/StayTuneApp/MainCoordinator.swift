@@ -27,11 +27,11 @@ class MainCoordinator {
     }
 
     func start() {
-//        window.rootViewController = authorizationCoordinator.startController()
-//        authorizationCoordinator.navigationController.popToRootViewController(animated: false)
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [settingsCoordinator.settingsController(), concertsCoordinator.concertsController(), profileCoordinator.profileController()]
-        window.rootViewController = tabBarController
+        window.rootViewController = authorizationCoordinator.startController()
+        authorizationCoordinator.navigationController.popToRootViewController(animated: true)
+//        let tabBarController = UITabBarController()
+//        tabBarController.viewControllers = [settingsCoordinator.settingsController(), concertsCoordinator.concertsController(), profileCoordinator.profileController()]
+//        window.rootViewController = tabBarController
     }
 
     func userLogined() {
