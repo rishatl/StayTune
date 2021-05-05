@@ -11,17 +11,11 @@ import UIKit
 import KeychainAccess
 
 protocol ConcertService {
-    func loadMembers(completion: @escaping (Result<[ConcertMember], ConcertErrors>) -> Void)
-    func loadMemberDetails(id: String, completion: @escaping (Result<ConcertMemberDetails, Error>) -> Void)
+    func loadConcerts(completion: @escaping (Result<[Concert], ConcertErrors>) -> Void)
+    func loadConcertDetails(id: Int, completion: @escaping (Result<ConcertDetails, ConcertErrors>) -> Void)
 }
 
 class RestConcertService: ConcertService {
-    let baseUrl: URL = {
-        guard let url = URL(string: "https://raw.githubusercontent.com/AZigangaraev/ITIS_2020_2_CW_1/main") else {
-            fatalError("Could not create base url")
-        }
-        return url
-    }()
 
     let listConcertsUrl: URL = {
         guard let url = URL(string: "http://localhost:8080/concerts") else {
@@ -30,40 +24,72 @@ class RestConcertService: ConcertService {
         return url
     }()
 
-    func getTokenFromKeychain() -> String? {
-        let keychain = Keychain(service: "user_token")
+    let concertUrl: URL = {
+        guard let url = URL(string: "http://localhost:8080/concert/byConcertId") else {
+            fatalError("Could not create base url")
+        }
+        return url
+    }()
 
-        guard let token = keychain["token"] else { return nil }
-
-        return token
-    }
-
-    func loadMembers(completion: @escaping (Result<[ConcertMember], ConcertErrors>) -> Void) {
-        guard let token = getTokenFromKeychain() else { return completion(.failure(.errorTokenSending))}
+    func loadConcerts(completion: @escaping (Result<[Concert], ConcertErrors>) -> Void) {
+        let keychainService = KeychainService()
+        guard let token = keychainService.getTokenFromKeychain() else { return completion(.failure(.errorTokenSending))
+        }
         let headers: HTTPHeaders = [
             "Authorization": token,
             "Content-Type": "application/json"
         ]
         AF.request(listConcertsUrl, headers: headers).validate(statusCode: 200..<300)
-            .responseDecodable(of: [ConcertMember].self) { dataResponse in
+            .responseDecodable(of: [Concert].self) { dataResponse in
             switch dataResponse.result {
-            case .success(let concertMembers):
-                completion(.success(concertMembers))
+            case .success(let concerts):
+                completion(.success(concerts))
             case .failure(_):
                 completion(.failure(.errorGetConcerts))
             }
         }
     }
 
-    func loadMemberDetails(id: String, completion: @escaping (Result<ConcertMemberDetails, Error>) -> Void) {
-        let stringId = "\(id).json"
-        let membersURL = baseUrl.appendingPathComponent("members").appendingPathComponent(stringId)
-        AF.request(membersURL).validate(statusCode: 200..<300).responseDecodable(of: ConcertMemberDetails.self) { dataResponse in
+    func jsonConvert(id: Int) -> Data? {
+        let jsonObject = NSMutableDictionary()
+
+        jsonObject.setValue(id, forKey: "id")
+
+        let jsonData: Data
+
+        do {
+            jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: JSONSerialization.WritingOptions()) as Data
+            let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue)! as String
+            print("json string = \(jsonString)")
+            return jsonData
+        } catch _ {
+            print("JSON failure convert")
+            return nil
+        }
+    }
+
+    func loadConcertDetails(id: Int, completion: @escaping (Result<ConcertDetails, ConcertErrors>) -> Void) {
+        let keychainService = KeychainService()
+        guard let token = keychainService.getTokenFromKeychain() else { return completion(.failure(.errorTokenSending))
+        }
+        let headers: HTTPHeaders = [
+            "Authorization": token,
+            "Content-Type": "application/json"
+        ]
+
+        let jsonData = jsonConvert(id: id)
+
+        var request = URLRequest(url: concertUrl)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.headers = headers
+        request.httpBody = jsonData
+
+        AF.request(request).validate(statusCode: 200..<300).responseDecodable(of: ConcertDetails.self) { dataResponse in
             switch dataResponse.result {
-            case .success(let concertMemberDetails):
-                completion(.success(concertMemberDetails))
-            case .failure(let error):
-                completion(.failure(error))
+            case .success(let concertsDetails):
+                completion(.success(concertsDetails))
+            case .failure(_):
+                completion(.failure(.errorGetConcert))
             }
         }
     }

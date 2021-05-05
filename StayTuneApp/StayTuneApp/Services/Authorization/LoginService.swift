@@ -72,7 +72,6 @@ class LoginService: LoginServiceProtocol {
             }
             let keychain = Keychain(service: "user_token")
             keychain["token"] = value.token
-            print(keychain["token"]!)
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.mainCoordinator?.userLogined()
             completion(.success(()))

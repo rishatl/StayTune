@@ -11,4 +11,5 @@ import UIKit
 enum ConcertErrors: String, Error {
     case errorTokenSending = "Token didn't send"
     case errorGetConcerts = "Couldn't get the list of concerts"
+    case errorGetConcert = "Couldn't get concert"
 }

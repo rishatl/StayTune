@@ -10,6 +10,7 @@ use_frameworks!
   pod 'Alamofire'
   pod 'Kingfisher'
   pod 'IQKeyboardManager'
+  pod 'GoogleMaps', '4.2.0'
 
   # Pods for StayTuneApp
   pod 'SnapKit', '~> 5.0.0'

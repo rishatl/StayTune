@@ -20,7 +20,7 @@ class DateFormatter {
         - Parameter dateFormat: The output format of the NSDate object.
         - Returns: NSDate formatted Date object
     */
-    class func getDateFromString(_ dateString: String, dateFormat: String = "dd-MM-yyyy") -> Date {
+    class func getDateFromString(_ dateString: String, dateFormat: String = "yyyy-MM-dd") -> Date {
         let dateFormatter = Foundation.DateFormatter()
         dateFormatter.dateFormat = dateFormat
 
@@ -35,7 +35,7 @@ class DateFormatter {
         - Parameter dateFormat: The output format of the output String
         - Returns: String formatted output date String
     */
-    class func getStringFromDate(_ date: Date, dateFormat: String = "dd-MM-yyyy") -> String {
+    class func getStringFromDate(_ date: Date, dateFormat: String = "yyyy-MM-dd") -> String {
         let dateFormatter = Foundation.DateFormatter()
         dateFormatter.dateFormat = dateFormat
 

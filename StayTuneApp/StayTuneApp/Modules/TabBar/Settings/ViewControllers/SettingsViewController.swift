@@ -113,13 +113,15 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let section = SettingsSection(rawValue: indexPath.section) else { return }
 
-        switch SocialOptions(rawValue: indexPath.row) {
-        case .editProfile:
-            break
-        case .logOut:
-            toAuthorization?()
-        case .none:
-            break
+        if section == .Social {
+            switch SocialOptions(rawValue: indexPath.row) {
+            case .editProfile:
+                break
+            case .logOut:
+                toAuthorization?()
+            case .none:
+                break
+            }
         }
 
         switch section {

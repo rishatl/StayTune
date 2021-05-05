@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ConcertMemberCell: UICollectionViewCell, ConcertMemberCellView {
-    var presenter: ConcertMemberCellPresenter? {
+class ConcertCell: UICollectionViewCell, ConcertCellView {
+    var presenter: ConcertCellPresenter? {
         didSet {
             presenter?.setupCell()
         }
@@ -16,14 +16,14 @@ class ConcertMemberCell: UICollectionViewCell, ConcertMemberCellView {
 
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var nameLabel: UILabel!
-    @IBOutlet private var rankLabel: UILabel!
+    @IBOutlet private var locationLabel: UILabel!
 
     func set(name: String) {
         nameLabel.text = name
     }
 
-    func set(rank: String) {
-        rankLabel.text = rank
+    func set(location: String) {
+        locationLabel.text = location
     }
 
     func set(imageURL: URL?) {

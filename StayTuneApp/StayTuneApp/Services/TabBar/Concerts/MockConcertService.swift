@@ -8,23 +8,33 @@
 import Foundation
 
 class MockConcertService: ConcertService {
-    private lazy var mockMember: ConcertMember = ConcertMember(
-        id: "holy-wan",
-        name: "Obi-Wan Kenobi",
-        location: "Anywere"
-//        rank: .master,
-//        imageUrl: nil
-    )
-    private lazy var mockMemberDetails: ConcertMemberDetails = ConcertMemberDetails(
-        councilMember: mockMember,
-        bio: "The perfect one."
+
+    private lazy var mockConcert: Concert = Concert(
+        id: 0,
+        name: "Anyone",
+        location: "Anywere",
+        imageUrl: nil
     )
 
-    func loadMembers(completion: @escaping (Result<[ConcertMember], ConcertErrors>) -> Void) {
-        completion(.success(Array(repeating: mockMember, count: 10)))
+    private lazy var mockConcertDetails: ConcertDetails = ConcertDetails(
+        id: 0,
+        name: "Anyone",
+        location: "Anywere",
+        latitude: 0.0,
+        longitude: 0.0,
+        date: DateFormatter.getDateFromString("0000-00-00"),
+        about: "Anything",
+        singer: "Anyone",
+        singerUrl: nil,
+        price: 0,
+        imageUrl: nil
+    )
+
+    func loadConcerts(completion: @escaping (Result<[Concert], ConcertErrors>) -> Void) {
+        completion(.success(Array(repeating: mockConcert, count: 10)))
     }
 
-    func loadMemberDetails(id: String, completion: @escaping (Result<ConcertMemberDetails, Error>) -> Void) {
-        completion(.success(mockMemberDetails))
+    func loadConcertDetails(id: Int, completion: @escaping (Result<ConcertDetails, ConcertErrors>) -> Void) {
+        completion(.success(mockConcertDetails))
     }
 }

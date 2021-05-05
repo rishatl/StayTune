@@ -1,5 +1,10 @@
 PODS:
   - Alamofire (5.4.1)
+  - GoogleMaps (4.2.0):
+    - GoogleMaps/Maps (= 4.2.0)
+  - GoogleMaps/Base (4.2.0)
+  - GoogleMaps/Maps (4.2.0):
+    - GoogleMaps/Base
   - IQKeyboardManager (6.5.6)
   - KeychainAccess (4.2.2)
   - Kingfisher (6.2.1)
@@ -8,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - GoogleMaps (= 4.2.0)
   - IQKeyboardManager
   - KeychainAccess
   - Kingfisher
@@ -17,6 +23,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - GoogleMaps
     - IQKeyboardManager
     - KeychainAccess
     - Kingfisher
@@ -25,12 +32,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  GoogleMaps: eb03e327edfd70b06de1e6e321653f73712df7ad
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
   Kingfisher: e71c6fac2aebb1262888cabc2cb13d313362a48f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
 
-PODFILE CHECKSUM: 4adf82d057508e477e35b92d88d61e5a5dc2a9bd
+PODFILE CHECKSUM: a19181501b0824ee518106ce24bafd6b4ead27d6
 
 COCOAPODS: 1.10.1
