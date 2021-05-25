@@ -9,14 +9,14 @@ import Foundation
 
 class MockConcertService: ConcertService {
 
-    private lazy var mockConcert: Concert = Concert(
+    private lazy var mockConcert = Concert(
         id: 0,
         name: "Anyone",
         location: "Anywere",
         imageUrl: nil
     )
 
-    private lazy var mockConcertDetails: ConcertDetails = ConcertDetails(
+    private lazy var mockConcertDetails = ConcertDetails(
         id: 0,
         name: "Anyone",
         location: "Anywere",
@@ -27,7 +27,9 @@ class MockConcertService: ConcertService {
         singer: "Anyone",
         singerUrl: nil,
         price: 0,
-        imageUrl: nil
+        imageUrl: nil,
+        subscribers: [],
+        userLiked: []
     )
 
     func loadConcerts(completion: @escaping (Result<[Concert], ConcertErrors>) -> Void) {
@@ -36,5 +38,9 @@ class MockConcertService: ConcertService {
 
     func loadConcertDetails(id: Int, completion: @escaping (Result<ConcertDetails, ConcertErrors>) -> Void) {
         completion(.success(mockConcertDetails))
+    }
+
+    func addFavorite(id: Int, completion: @escaping (Result<Void, ConcertErrors>) -> Void) {
+        completion(.success(()))
     }
 }

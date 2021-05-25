@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor(red: 255.0 / 255.0, green: 195.0 / 255.0, blue: 42.0 / 255.0, alpha: 1)
         UITabBar.appearance().backgroundColor = UIColor(red: 255.0 / 255.0, green: 195.0 / 255.0, blue: 42.0 / 255.0, alpha: 1)
         UITabBar.appearance().isTranslucent = false
-        
+
         mainCoordinator = MainCoordinator()
         mainCoordinator?.start()
 
@@ -89,5 +89,20 @@ extension UITextField {
             self.attributedPlaceholder = NSAttributedString(string: self.placeholder != nil ?
                                                                 self.placeholder! : "", attributes: [NSAttributedString.Key.foregroundColor: newValue!])
         }
+    }
+}
+
+extension UIViewController {
+    func alert(message: String, title: String = "Error") {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    func telegramAlert(message: String, title: String = "Telegram") {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }

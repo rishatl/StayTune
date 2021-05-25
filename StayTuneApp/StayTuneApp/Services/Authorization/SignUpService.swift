@@ -22,7 +22,7 @@ class SignUpService: SignUpServiceProtocol {
         return url
     }()
 
-    func jsonConvert(login: String, username: String,  password: String) -> Data? {
+    func jsonConvert(login: String, username: String, password: String) -> Data? {
         let jsonObject = NSMutableDictionary()
 
         jsonObject.setValue(login, forKey: "email")
@@ -34,10 +34,8 @@ class SignUpService: SignUpServiceProtocol {
         do {
             jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: JSONSerialization.WritingOptions()) as Data
             let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue)! as String
-            print("json string = \(jsonString)")
             return jsonData
         } catch _ {
-            print("JSON failure convert")
             return nil
         }
     }

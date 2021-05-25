@@ -12,6 +12,8 @@ private let reuseIdentifier = "SettingsCell"
 class SettingsViewController: UIViewController {
 
     var toAuthorization: (() -> Void)?
+    var toEditProfile: (() -> Void)?
+    var toAboutApp: (() -> Void)?
 
     // MARK: - Properties
 
@@ -23,6 +25,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        userInfoHeader.viewDidLoad()
     }
 
     // MARK: - Helper Functions
@@ -48,7 +51,6 @@ class SettingsViewController: UIViewController {
         configureTableView()
         navigationItem.title = "Settings"
     }
-
 }
 
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -64,6 +66,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         switch section {
         case .Social:
             return SocialOptions.allCases.count
+
         case .Communications:
             return CommunicationsOptions.allCases.count
         }
@@ -96,13 +99,14 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         bgColorView.backgroundColor = UIColor.darkGray
         cell.selectedBackgroundView = bgColorView
         cell.textLabel?.textColor = UIColor(red: 255.0 / 255.0, green: 195.0 / 255.0, blue: 42.0 / 255.0, alpha: 1)
-        
+
         guard let section = SettingsSection(rawValue: indexPath.section) else { return UITableViewCell() }
 
         switch section {
         case .Social:
             let social = SocialOptions(rawValue: indexPath.row)
             cell.sectionType = social
+
         case .Communications:
             let communications = CommunicationsOptions(rawValue: indexPath.row)
             cell.sectionType = communications
@@ -116,19 +120,27 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         if section == .Social {
             switch SocialOptions(rawValue: indexPath.row) {
             case .editProfile:
-                break
+                toEditProfile?()
+
             case .logOut:
                 toAuthorization?()
+
             case .none:
                 break
             }
         }
 
-        switch section {
-        case .Social:
-            print(SocialOptions(rawValue: indexPath.row)?.description)
-        case .Communications:
-            print(CommunicationsOptions(rawValue: indexPath.row)?.description)
+        if section == .Communications {
+            switch CommunicationsOptions(rawValue: indexPath.row) {
+            case .notifications:
+                break
+
+            case .aboutApp:
+                toAboutApp?()
+
+            default:
+                break
+            }
         }
     }
 }

@@ -33,11 +33,9 @@ class LoginService: LoginServiceProtocol {
 
         do {
             jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: JSONSerialization.WritingOptions()) as Data
-            let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue)! as String
-            print("json string = \(jsonString)")
+            _ = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue)! as String
             return jsonData
         } catch _ {
-            print("JSON failure convert")
             return nil
         }
     }
@@ -72,6 +70,12 @@ class LoginService: LoginServiceProtocol {
             }
             let keychain = Keychain(service: "user_token")
             keychain["token"] = value.token
+            keychain["id"] = String(value.user.id)
+            keychain["username"] = value.user.username
+            keychain["email"] = value.user.email
+            keychain["city"] = value.user.city
+            keychain["telegram"] = value.user.telegram
+            keychain["image"] = value.user.image
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.mainCoordinator?.userLogined()
             completion(.success(()))

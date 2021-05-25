@@ -43,12 +43,6 @@ class SettingsCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc func handleSwitchAction(sender: UISwitch){
-        if sender.isOn {
-            print("on")
-        } else {
-            print("off")
-        }
+    @objc func handleSwitchAction(sender: UISwitch) {
     }
-
 }

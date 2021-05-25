@@ -8,6 +8,7 @@
 import UIKit
 
 class ConcertListViewController: UIViewController, ConcertListView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
     private let cellId: String = "Cell"
     @IBOutlet private var collectionView: UICollectionView!
     var presenter: ConcertListPresenter?
@@ -26,11 +27,31 @@ class ConcertListViewController: UIViewController, ConcertListView, UICollection
         super.viewDidLoad()
         presenter?.viewDidLoad()
 
+        collectionView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(updateData), for: .valueChanged)
+        collectionView.delegate = self
+
+        setUpSearchController()
+    }
+
+    func setUpSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search"
         navigationItem.searchController = searchController
         definesPresentationContext = true
+    }
+
+    let refreshControl: UIRefreshControl = {
+        let control = UIRefreshControl()
+        control.tintColor = UIColor(red: 255.0 / 255.0, green: 195.0 / 255.0, blue: 42.0 / 255.0, alpha: 1)
+        return control
+    }()
+
+    @objc func updateData() {
+        presenter?.loadConcerts()
+        reloadData()
+        collectionView.refreshControl?.endRefreshing()
     }
 
     func reloadData() {
@@ -52,9 +73,9 @@ class ConcertListViewController: UIViewController, ConcertListView, UICollection
 
         if isFiltering {
             concert = filteredConcerts[indexPath.row]
-        } else {
-            presenter?.set(cell: cell, with: concert)
         }
+
+        presenter?.set(cell: cell, with: concert)
         return cell
     }
 
@@ -70,8 +91,8 @@ extension ConcertListViewController: UISearchResultsUpdating {
 
     private func filterContentForSearchText(_ searchText: String) {
         filteredConcerts = presenter?.getConcerts().filter({ (concert: Concert) -> Bool in
-            return concert.name.lowercased().contains(searchText.lowercased())
+            return concert.name.lowercased().contains(searchText.lowercased()) || concert.location.lowercased().contains(searchText.lowercased())
         }) ?? []
-        collectionView.reloadData()
+        reloadData()
     }
 }

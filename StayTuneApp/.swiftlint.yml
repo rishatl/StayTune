@@ -3,6 +3,9 @@ included:
 
 excluded:
   - Pods
+  - Carthage
+  - Source/ExcludedFolder
+  - Source/ExcludedFile.swift
 
 disabled_rules:
   - discouraged_optional_boolean

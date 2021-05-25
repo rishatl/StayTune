@@ -14,7 +14,7 @@ class DateFormatter {
 
     /**
         Get a NSDate formatted object from a given String.
-    
+
         - Note: the dateFormat is an optional parameter, with default value: dd-MM-yyyy
         - Parameter dateString: The Date String to parse.
         - Parameter dateFormat: The output format of the NSDate object.
@@ -29,7 +29,7 @@ class DateFormatter {
 
     /**
         Get a formatted String from a given NSDate object
-        
+
         - Note: the dateFormat is an optional parameter, with default value: dd-MM-yyyy
         - Parameter date: The Date object to parse
         - Parameter dateFormat: The output format of the output String
@@ -41,5 +41,4 @@ class DateFormatter {
 
         return dateFormatter.string(from: date)
     }
-
 }

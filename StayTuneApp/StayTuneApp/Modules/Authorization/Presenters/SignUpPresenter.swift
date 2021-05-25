@@ -36,7 +36,7 @@ class SignUpPresenter {
 
     func viewController() -> SignUpViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller: SignUpViewController = storyboard.instantiateViewController(identifier: "SignUpViewController")
+        let controller: SignUpViewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
             controller.presenter = self
             view = controller
             return controller

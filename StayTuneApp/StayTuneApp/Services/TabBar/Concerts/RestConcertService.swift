@@ -31,6 +31,22 @@ class RestConcertService: ConcertService {
         return url
     }()
 
+    func jsonConvert(id: Int) -> Data? {
+        let jsonObject = NSMutableDictionary()
+
+        jsonObject.setValue(id, forKey: "id")
+
+        let jsonData: Data
+
+        do {
+            jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: JSONSerialization.WritingOptions()) as Data
+            _ = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue)! as String
+            return jsonData
+        } catch _ {
+            return nil
+        }
+    }
+
     func loadConcerts(completion: @escaping (Result<[Concert], ConcertErrors>) -> Void) {
         let keychainService = KeychainService()
         guard let token = keychainService.getTokenFromKeychain() else { return completion(.failure(.errorTokenSending))
@@ -41,31 +57,14 @@ class RestConcertService: ConcertService {
         ]
         AF.request(listConcertsUrl, headers: headers).validate(statusCode: 200..<300)
             .responseDecodable(of: [Concert].self) { dataResponse in
-            switch dataResponse.result {
-            case .success(let concerts):
-                completion(.success(concerts))
-            case .failure(_):
-                completion(.failure(.errorGetConcerts))
+                switch dataResponse.result {
+                case .success(let concerts):
+                    completion(.success(concerts))
+
+                case .failure:
+                    completion(.failure(.errorGetConcerts))
+                }
             }
-        }
-    }
-
-    func jsonConvert(id: Int) -> Data? {
-        let jsonObject = NSMutableDictionary()
-
-        jsonObject.setValue(id, forKey: "id")
-
-        let jsonData: Data
-
-        do {
-            jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: JSONSerialization.WritingOptions()) as Data
-            let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue)! as String
-            print("json string = \(jsonString)")
-            return jsonData
-        } catch _ {
-            print("JSON failure convert")
-            return nil
-        }
     }
 
     func loadConcertDetails(id: Int, completion: @escaping (Result<ConcertDetails, ConcertErrors>) -> Void) {
@@ -88,7 +87,8 @@ class RestConcertService: ConcertService {
             switch dataResponse.result {
             case .success(let concertsDetails):
                 completion(.success(concertsDetails))
-            case .failure(_):
+
+            case .failure:
                 completion(.failure(.errorGetConcert))
             }
         }

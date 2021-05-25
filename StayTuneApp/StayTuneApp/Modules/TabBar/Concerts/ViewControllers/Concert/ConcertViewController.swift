@@ -6,45 +6,62 @@
 //
 
 import UIKit
+import ExpandableLabel
 
-class ConcertViewController: UIViewController, ConcertView, UITableViewDataSource, UITableViewDelegate {
+enum SubState {
+    case sub
+    case unsub
+}
 
-    // Data model: These strings will be the data for the table view cells
-    let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
+enum FavState {
+    case fav
+    case unfav
+}
 
-    // cell reuse id (cells that scroll out of view can be reused)
-    let cellReuseIdentifier = "cell"
-
-    // number of rows in table view
-    
+class ConcertViewController: UIViewController, ConcertView {
     var presenter: ConcertPresenterImplementation?
-    
+
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var nameLabel: UILabel!
     @IBOutlet private var dateLabel: UILabel!
     @IBOutlet private var locationLabel: UILabel!
-    @IBOutlet private var aboutLabel: UILabel!
+    @IBOutlet private var aboutLabel: ExpandableLabel!
     @IBOutlet private var singerLabel: UILabel!
     @IBOutlet private var singerUrlLabel: UILabel!
     @IBOutlet private var priceLabel: UILabel!
 
     @IBOutlet private var mapsButton: UIButton!
+    @IBOutlet private var subscribeButton: UIButton!
 
-    @IBOutlet private var tableView: UITableView!
+    private var subState: SubState = .unsub
+    private var favState: FavState = .unfav
 
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-
-        // Register the table view cell class and its reuse id
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
-        tableView.delegate = self
-        tableView.dataSource = self
         setUpElements()
     }
 
     func setUpElements() {
+        if favState == .unfav {
+            if #available(iOS 13.0, *) {
+                let favoriteButtonImage = UIImage(systemName: "star")
+                let favoriteButton = UIBarButtonItem(image: favoriteButtonImage, style: .plain, target: self, action: #selector(favoriteTapped))
+                navigationItem.rightBarButtonItem = favoriteButton
+            } else {
+                // Doesn't work
+                let favoriteButtonImage = UIImage(named: "star")
+                let favoriteButton = UIBarButtonItem(image: favoriteButtonImage, style: .plain, target: self, action: #selector(favoriteTapped))
+                navigationItem.rightBarButtonItem = favoriteButton
+            }
+        }
         FilledButtonUtilities.styleFilledButton(mapsButton)
+        FilledButtonUtilities.styleFilledButton(subscribeButton)
+//                aboutLabel.numberOfLines = 3
+//                aboutLabel.collapsed = true
+//                aboutLabel.collapsedAttributedLink = NSAttributedString(string: "More")
+//                aboutLabel.setLessLinkWith(lessLink: "Close", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 255.0 / 255.0, green: 195.0 / 255.0, blue: 42.0 / 255.0, alpha: 1)], position: nil)
+//                aboutLabel.expandedAttributedLink = NSAttributedString(string: "Less")
     }
 
     func set(name: String) {
@@ -79,30 +96,60 @@ class ConcertViewController: UIViewController, ConcertView, UITableViewDataSourc
         imageView.kf.setImage(with: imageURL, placeholder: UIImage(named: "No-Image-Placeholder"))
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.animals.count
+    func getSubState() -> SubState {
+        return subState
     }
 
-    // create a cell for each table view row
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // create a new cell if needed or reuse an old one
-        let cell:UITableViewCell = (self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell?)!
-
-        cell.backgroundColor = UIColor(red: 37.0 / 255.0, green: 37.0 / 255.0, blue: 37.0 / 255.0, alpha: 1)
-        let bgColorView = UIView()
-        bgColorView.backgroundColor = UIColor.darkGray
-        cell.selectedBackgroundView = bgColorView
-        cell.textLabel?.textColor = UIColor(red: 255.0 / 255.0, green: 195.0 / 255.0, blue: 42.0 / 255.0, alpha: 1)
-
-        // set the text from the data model
-        cell.textLabel?.text = self.animals[indexPath.row]
-
-        return cell
+    func getFavState() -> FavState {
+        return favState
     }
 
-    // method to run when table view cell is tapped
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped cell number \(indexPath.row).")
+    func changeSubscribe() {
+        switch subState {
+        case .unsub:
+            subscribeButton.setTitle("Unsubscribe", for: .normal)
+            subState = .sub
+
+        case .sub:
+            subscribeButton.setTitle("Subscribe", for: .normal)
+            subState = .unsub
+        }
+    }
+
+    func changeFavState() {
+        switch favState {
+        case .fav:
+            if #available(iOS 13.0, *) {
+                let favoriteButtonImage = UIImage(systemName: "star")
+                let favoriteButton = UIBarButtonItem(image: favoriteButtonImage, style: .plain, target: self, action: #selector(favoriteTapped))
+                navigationItem.rightBarButtonItem = favoriteButton
+                favState = .unfav
+            } else {
+                // Doesn't work
+                let favoriteButtonImage = UIImage(named: "star")
+                let favoriteButton = UIBarButtonItem(image: favoriteButtonImage, style: .plain, target: self, action: #selector(favoriteTapped))
+                navigationItem.rightBarButtonItem = favoriteButton
+                favState = .unfav
+            }
+
+        case .unfav:
+            if #available(iOS 13.0, *) {
+                let favoriteButtonImage = UIImage(systemName: "star.fill")
+                let favoriteButton = UIBarButtonItem(image: favoriteButtonImage, style: .plain, target: self, action: #selector(favoriteTapped))
+                navigationItem.rightBarButtonItem = favoriteButton
+                favState = .fav
+            } else {
+                // Doesn't work
+                let favoriteButtonImage = UIImage(named: "star.fill")
+                let favoriteButton = UIBarButtonItem(image: favoriteButtonImage, style: .plain, target: self, action: #selector(favoriteTapped))
+                navigationItem.rightBarButtonItem = favoriteButton
+                favState = .fav
+            }
+        }
+    }
+
+    @objc public func favoriteTapped() {
+        presenter?.pressFavButton()
     }
 
     @IBAction func mapsTapped(_ sender: Any) {
@@ -110,6 +157,10 @@ class ConcertViewController: UIViewController, ConcertView, UITableViewDataSourc
     }
 
     @IBAction private func subscribe(_ sender: Any) {
-        tableView.isHidden = false
+        presenter?.pressSubButton(isNeedSubscribe: true)
+    }
+
+    @IBAction private func showSubs(_ sender: Any) {
+        presenter?.pressSubButton(isNeedSubscribe: false)
     }
 }

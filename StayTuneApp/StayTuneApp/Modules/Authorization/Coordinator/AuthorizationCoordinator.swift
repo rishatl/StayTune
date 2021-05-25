@@ -13,7 +13,7 @@ class AuthorizationCoordinator {
     private let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
     func startController() -> UIViewController {
-        let viewController: StartViewController = storyboard.instantiateViewController(identifier: "StartViewController")
+        let viewController: StartViewController = storyboard.instantiateViewController(withIdentifier: "StartViewController") as! StartViewController
         viewController.toSignUp = {
             self.navigationController.pushViewController(self.signUpController(), animated: true)
         }

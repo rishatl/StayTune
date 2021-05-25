@@ -33,7 +33,7 @@ class LoginPresenter {
 
     func viewController() -> LoginViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller: LoginViewController = storyboard.instantiateViewController(identifier: "LoginViewController")
+        let controller: LoginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             controller.presenter = self
             view = controller
             return controller

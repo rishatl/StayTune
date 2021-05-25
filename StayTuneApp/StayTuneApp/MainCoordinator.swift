@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import KeychainAccess
 
 class MainCoordinator {
     let window: UIWindow
@@ -15,6 +16,7 @@ class MainCoordinator {
     var concertsCoordinator: ConcertsCoordinator
     var settingsCoordinator: SettingsCoordinator
     var profileCoordinator: ProfileCoordinator
+    let tabBarController = UITabBarController()
 
     init(loginService: LoginService = LoginService()) {
         authorizationCoordinator = AuthorizationCoordinator()
@@ -27,17 +29,25 @@ class MainCoordinator {
     }
 
     func start() {
-        window.rootViewController = authorizationCoordinator.startController()
-        authorizationCoordinator.navigationController.popToRootViewController(animated: true)
-//        let tabBarController = UITabBarController()
-//        tabBarController.viewControllers = [settingsCoordinator.settingsController(), concertsCoordinator.concertsController(), profileCoordinator.profileController()]
-//        window.rootViewController = tabBarController
+        profileCoordinator.mainCoordinator = self
+        let keychain = Keychain(service: "user_token")
+        if keychain["token"] == nil {
+            window.rootViewController = authorizationCoordinator.startController()
+            authorizationCoordinator.navigationController.popToRootViewController(animated: true)
+        } else {
+            tabBarController.viewControllers = [settingsCoordinator.settingsController(), concertsCoordinator.concertsController(), profileCoordinator.profileController()]
+            window.rootViewController = tabBarController
+        }
     }
 
     func userLogined() {
-        let tabBarController = UITabBarController()
         tabBarController.viewControllers = [settingsCoordinator.settingsController(), concertsCoordinator.concertsController(), profileCoordinator.profileController()]
         window.rootViewController = tabBarController
         settingsCoordinator.navigationController.popToRootViewController(animated: false)
+    }
+
+    func openConcertDetails(concert: ConcertDetails) {
+        tabBarController.selectedIndex = 1
+        concertsCoordinator.showConcertDetails(concert: concert)
     }
 }
