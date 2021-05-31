@@ -54,28 +54,24 @@ class FriendCell: UITableViewCell, FriendCellView {
                 return
             }
 
-            if friend.isFriend == true || keychain["username"] == friend.username {
+            if friend.isFriend == true {
                 updateFollowButton()
             }
         }
     }
 
     func updateFollowButton() {
-        if keychain["username"] != friend?.username {
-            if friend?.isFriend == false {
-                followButton.cornerRadius = 2
-                followButton.borderWidth = 1
-                followButton.borderColor = UIColor.ProfileSection.activeYellow
-                followButton.setTitle("Follow", for: .normal)
-                followButton.setTitleColor(UIColor.ProfileSection.activeYellow, for: .normal)
-            } else {
-                followButton.borderWidth = 0
-                followButton.cornerRadius = 0
-                followButton.setTitle("Unfollow", for: .normal)
-                followButton.setTitleColor(UIColor.ProfileSection.inactiveWhite, for: .normal)
-            }
+        if friend?.isFriend == false {
+            followButton.cornerRadius = 2
+            followButton.borderWidth = 1
+            followButton.borderColor = UIColor.ProfileSection.activeYellow
+            followButton.setTitle("Follow", for: .normal)
+            followButton.setTitleColor(UIColor.ProfileSection.activeYellow, for: .normal)
         } else {
-            followButton.isHidden = true
+            followButton.borderWidth = 0
+            followButton.cornerRadius = 0
+            followButton.setTitle("Unfollow", for: .normal)
+            followButton.setTitleColor(UIColor.ProfileSection.inactiveWhite, for: .normal)
         }
     }
 

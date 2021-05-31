@@ -25,7 +25,20 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(updateData), for: .valueChanged)
+    }
+
+    let refreshControl: UIRefreshControl = {
+        let control = UIRefreshControl()
+        control.tintColor = UIColor(red: 255.0 / 255.0, green: 195.0 / 255.0, blue: 42.0 / 255.0, alpha: 1)
+        return control
+    }()
+
+    @objc func updateData() {
         userInfoHeader.viewDidLoad()
+        tableView.refreshControl?.endRefreshing()
     }
 
     // MARK: - Helper Functions
@@ -44,6 +57,7 @@ class SettingsViewController: UIViewController {
         let frame = CGRect(x: 0, y: 88, width: view.frame.width, height: 100)
         userInfoHeader = UserInfoHeader(frame: frame)
         tableView.tableHeaderView = userInfoHeader
+        userInfoHeader.viewDidLoad()
         tableView.tableFooterView = UIView()
     }
 
