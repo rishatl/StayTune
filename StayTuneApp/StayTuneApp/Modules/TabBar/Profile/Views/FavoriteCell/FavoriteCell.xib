@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="tcz-Oy-EFo" customClass="FavoritesCell" customModule="StayTuneApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tcz-Oy-EFo" id="csL-qZ-O0n">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No-Image-Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="d3W-uZ-uix">
+                        <rect key="frame" x="12" y="6" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="taH-jN-oe5"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concert name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egI-JO-BsI">
+                        <rect key="frame" x="69" y="7" width="109" height="22"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
+                        <color key="textColor" red="0.9981678128" green="0.76441103219999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHa-Lr-TzV">
+                        <rect key="frame" x="69" y="30.5" width="24.5" height="19.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="d3W-uZ-uix" secondAttribute="bottom" constant="6" id="4id-Ft-fPN"/>
+                    <constraint firstItem="d3W-uZ-uix" firstAttribute="leading" secondItem="csL-qZ-O0n" secondAttribute="leading" constant="12" id="JHU-Xe-cMh"/>
+                    <constraint firstItem="egI-JO-BsI" firstAttribute="top" secondItem="csL-qZ-O0n" secondAttribute="top" constant="7" id="SrH-05-L2w"/>
+                    <constraint firstItem="pHa-Lr-TzV" firstAttribute="leading" secondItem="d3W-uZ-uix" secondAttribute="trailing" constant="12" id="mab-83-0bs"/>
+                    <constraint firstItem="egI-JO-BsI" firstAttribute="leading" secondItem="d3W-uZ-uix" secondAttribute="trailing" constant="12" id="rRC-wZ-uy3"/>
+                    <constraint firstAttribute="bottom" secondItem="pHa-Lr-TzV" secondAttribute="bottom" constant="7" id="yEG-S2-436"/>
+                    <constraint firstItem="d3W-uZ-uix" firstAttribute="top" secondItem="csL-qZ-O0n" secondAttribute="top" constant="6" id="z1L-bb-O5R"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="OxE-Lj-at3"/>
+            <color key="backgroundColor" red="0.14508211609999999" green="0.1451086104" blue="0.14507374170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="cityLabel" destination="pHa-Lr-TzV" id="cbi-1b-QmL"/>
+                <outlet property="concertImageView" destination="d3W-uZ-uix" id="2Ad-bi-mtp"/>
+                <outlet property="nameLabel" destination="egI-JO-BsI" id="0TI-Xi-xu6"/>
+            </connections>
+            <point key="canvasLocation" x="86" y="96"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="No-Image-Placeholder" width="488" height="600"/>
+    </resources>
+</document>

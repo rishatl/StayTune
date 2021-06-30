@@ -7,7 +7,25 @@
 		<key>StayTuneApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>453AF9EE25EBBC9900D9E0B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>453AFA0725EBBC9C00D9E0B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>453AFA1225EBBC9C00D9E0B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
