@@ -74,17 +74,21 @@ class SubscriberCell: UITableViewCell, SubscriberCellView {
     }
 
     func updateFollowButton() {
-        if subscriber?.isFriend == false {
-            followButton.cornerRadius = 2
-            followButton.borderWidth = 1
-            followButton.borderColor = UIColor.ProfileSection.activeYellow
-            followButton.setTitle("Follow", for: .normal)
-            followButton.setTitleColor(UIColor.ProfileSection.activeYellow, for: .normal)
+        if keychain["username"] != subscriber?.username {
+            if subscriber?.isFriend == false {
+                followButton.cornerRadius = 2
+                followButton.borderWidth = 1
+                followButton.borderColor = UIColor.ProfileSection.activeYellow
+                followButton.setTitle("Follow", for: .normal)
+                followButton.setTitleColor(UIColor.ProfileSection.activeYellow, for: .normal)
+            } else {
+                followButton.borderWidth = 0
+                followButton.cornerRadius = 0
+                followButton.setTitle("Unfollow", for: .normal)
+                followButton.setTitleColor(UIColor.ProfileSection.inactiveWhite, for: .normal)
+            }
         } else {
-            followButton.borderWidth = 0
-            followButton.cornerRadius = 0
-            followButton.setTitle("Unfollow", for: .normal)
-            followButton.setTitleColor(UIColor.ProfileSection.inactiveWhite, for: .normal)
+            followButton.isHidden = true
         }
     }
 

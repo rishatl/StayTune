@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -78,7 +79,7 @@
             <color key="backgroundColor" red="0.14508211609999999" green="0.1451086104" blue="0.14507374170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="avatarImageView" destination="K6E-z3-Xw6" id="yHs-Oo-eca"/>
-                <outlet property="emailLabel" destination="hT6-Q3-R7v" id="xYA-LE-xSh"/>
+                <outlet property="emailLabel" destination="WWo-Yo-SrX" id="ETC-GZ-QgV"/>
                 <outlet property="followButton" destination="3MS-5e-Vuq" id="Eey-RA-DgY"/>
                 <outlet property="usernameLabel" destination="hT6-Q3-R7v" id="pco-yp-Rau"/>
             </connections>
